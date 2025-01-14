@@ -47,7 +47,7 @@ body{
   .main-content {
     flex: 1;
     padding: 20px;
-        background-image: url('img2/blind-person-reading-home.jpg');
+        background-image: url('blind-person-reading-home.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
