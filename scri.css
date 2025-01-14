@@ -129,7 +129,7 @@ body {
 }
 
 .bg-image {
-    background-image: url('blind-person-reading-home.jpg'); /* Replace with your image URL */
+    background-image: url('doctor.jpg'); /* Replace with your image URL */
     background-size: cover; /* Cover the entire container */
     background-repeat: no-repeat; /* Avoid tiling */
     background-position: center; /* Center the image */
