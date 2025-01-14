@@ -123,6 +123,16 @@
   font-size: 1rem;
   color: #555;
 }
-body{
-  background-image: url('blind-person-reading-home.jpg');
+body {
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Ensure the body is 100% viewport height */
+}
+
+.bg-image {
+    background-image: url('blind-person-reading-home.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Cover the entire container */
+    background-repeat: no-repeat; /* Avoid tiling */
+    background-position: center; /* Center the image */
+    width: 100%; /* Stretch to 100% width */
+    height: 100%; /* Stretch to 100% height */
 }
