@@ -1,0 +1,125 @@
+/* General container styling */
+.container {
+  border: solid 1px #8d8d8d;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  max-width: 400px;
+  margin: 50px auto;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+.container .heading {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Form layout */
+.form {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0 auto;
+}
+
+/* Input fields styling */
+.input-field {
+  position: relative;
+}
+
+.input-field label {
+  position: absolute;
+  color: #8d8d8d;
+  pointer-events: none;
+  background-color: transparent;
+  left: 15px;
+  top: 10px;
+  transition: all 0.3s ease;
+}
+
+.input-field input {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: solid 1px #8d8d8d;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+.input-field input:focus,
+.input-field input:valid {
+  outline: none;
+  border-color: #0066ff;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 0.9rem;
+  color: #0066ff;
+}
+
+/* Button styling */
+.form .btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0034de, #006eff);
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form .btn:hover {
+  background: linear-gradient(135deg, #006eff, #0034de);
+}
+
+/* Account text */
+.acc-text {
+  text-align: center;
+}
+
+.acc-text span {
+  color: #0066ff;
+  cursor: pointer;
+}
+
+.acc-text span:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    margin: 20px auto;
+  }
+}
+/* Dashboard container */
+.dashboard-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.dashboard-container p {
+  font-size: 1rem;
+  color: #555;
+}

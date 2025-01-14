@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="scri.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+  <div class="container">
+    <div class="heading">Sign In to Your Account</div>
+    <form class="form" id="signInForm" action="javascript:void(0);">
+      <div class="input-field">
+        <input required autocomplete="off" type="text" name="username" id="username" />
+        <label for="username">Full Name</label>
+      </div>
+      <div class="input-field">
+        <input required autocomplete="off" type="email" name="email" id="email" />
+        <label for="email">Email</label>
+      </div>
+      <div class="input-field">
+        <input required autocomplete="off" type="password" name="password" id="password" />
+        <label for="password">Password</label>
+      </div>
+
+      <div class="btn-container">
+        <button type="submit" class="btn">Sign In</button>
+      </div>
+      <div class="acc-text">
+        New here? <span id="createAccountLink" style="color: #0066ff; cursor: pointer;">Create Account</span>
+      </div>
+    </form>
+  </div>
+
+  <script src="app.js"></script> <!-- Link to your JavaScript -->
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- s.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <link rel="stylesheet" href="scri.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+  <div class="container">
+    <div class="heading">Create a New Account</div>
+    <form class="form" id="createAccountForm" action="javascript:void(0);">
+      <div class="input-field">
+        <input required autocomplete="off" type="text" name="username" id="newUsername" />
+        <label for="newUsername">Full Name</label>
+      </div>
+      <div class="input-field">
+        <input required autocomplete="off" type="email" name="email" id="newEmail" />
+        <label for="newEmail">Email</label>
+      </div>
+      <div class="input-field">
+        <input required autocomplete="off" type="password" name="password" id="newPassword" />
+        <label for="newPassword">Password</label>
+      </div>
+
+      <div class="btn-container">
+        <button class="btn">Create Account</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="app.js"></script> <!-- Link to your JavaScript -->
+</body>
+</html>
