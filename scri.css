@@ -8,6 +8,15 @@
   margin: 50px auto;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
+h1 {
+  text-align: center; /* Horizontally center the text */
+  margin: 0; /* Remove default margin */
+  position: absolute; /* Position the <h1> element */
+  top: 50%; /* Position it at the vertical center */
+  left: 50%; /* Position it at the horizontal center */
+  transform: translate(-50%, -50%); /* Offset it by half of its own height and width */
+}
+
 
 
 
