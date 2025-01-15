@@ -130,9 +130,15 @@ body {
 
 .bg-image {
     background-image: url('doctor.jpg'); /* Replace with your image URL */
-    background-size: cover; /* Cover the entire container */
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: center center; /* Center the image horizontally and vertically */
     background-repeat: no-repeat; /* Avoid tiling */
-    background-position: center; /* Center the image */
-    width: 100%; /* Stretch to 100% width */
-    height: 100%; /* Stretch to 100% height */
+    background-attachment: fixed; /* Optional: Adds a parallax effect */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Enables flexbox for centering content */
+    justify-content: center; /* Centers child content horizontally */
+    align-items: center; /* Centers child content vertically */
+    object-fit: cover; /* Ensures that the image covers the container without distorting */
 }
+
