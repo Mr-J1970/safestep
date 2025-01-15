@@ -21,7 +21,7 @@
           <li data-target="scheduled-tasks" title="Scheduled Tasks"><img src="info.png"><h7>About us</h7></li>
           <li data-target="settings" title="Settings"><img src="settings.png"><h7>Settings</h7></li>
           
-          <img class="img" src="safestep.jpeg">            
+          <img class="img safestep" src="safestep.jpeg" alt="Safe Step">        
           </class>
         </ul>
       </nav>
@@ -222,6 +222,18 @@
       </section>
     </main>
   </div>
+        <style>
+  .img.safestep {
+    position: fixed; /* Fix the position to always stay in place */
+    bottom: 0;       /* Align to the bottom of the screen */
+    left: 0;         /* Align to the left of the screen */
+    width: 20%;      /* Set the width to 20% of the screen */
+    max-width: 100%; /* Ensure it doesn't exceed its container */
+    height: auto;    /* Maintain aspect ratio */
+    z-index: 10;     /* Ensure it appears above other content */
+  }
+</style>
+
   
   <script src="app.js"></script>
 </body>
