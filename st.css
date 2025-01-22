@@ -200,16 +200,19 @@ color: white;
   h7{
     color: black;
   }
-/* Styling for the product list container */
+/* Container for the product list */
 .product-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+  display: flex;
+  flex-wrap: wrap; /* Wrap items to the next row */
   gap: 15px; /* Spacing between products */
   padding: 20px;
+  justify-content: space-between; /* Distribute products evenly */
 }
 
 /* Individual product styling */
 .product {
+  width: calc(25% - 15px); /* 4 items per row, accounting for gap */
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -230,6 +233,7 @@ color: white;
 .product h4 {
   margin: 10px 0;
   font-size: 1em;
+  text-align: center;
 }
 
 .product button {
