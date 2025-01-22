@@ -200,25 +200,24 @@ color: white;
   h7{
     color: black;
   }
+/* Styling for the product list container */
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+  gap: 15px; /* Spacing between products */
   padding: 20px;
-  justify-content: space-around;
 }
 
+/* Individual product styling */
 .product {
-  flex: 1 1 calc(25% - 30px); /* Adjusts to fit 4 products per row */
-  max-width: calc(25% - 30px);
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 10px;
-  margin: 10px 0;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
 .product img {
