@@ -148,13 +148,14 @@
         <h8>Swaraj</h8>
         <hr>
       </div>
+            
       <nav class="menu">
         <ul>
           <li class="active" data-target="today-tasks" title="Today's Tasks">
             <img src="shopping-cart.png" alt="Cart">
             <h7>Available Products</h7>
           </li>
-          <li data-target="scheduled-tasks" title="Scheduled Tasks">
+          <li data-target="about-info" title="About Info">
             <img src="info.png" alt="Info">
             <h7>About Us</h7>
           </li>
@@ -164,15 +165,22 @@
           </li>
         </ul>
       </nav>
-      <img class="img safestep" src="safestep.jpeg" alt="Safe Step">
     </aside>
 
     <!-- Main Content -->
     <main class="main-content">
-      <!-- Today's Tasks Section -->
+      <!-- Available Products Section -->
       <section id="today-tasks" class="content-section active">
-        <div class="task-input">
-          <ul class="task-list"></ul>
+        <div class="product-card" id="productList"></div>
+      </section>
+
+      <!-- About Info Section -->
+      <section id="about-info" class="content-section">
+        <h1>Contact Info</h1>
+        <div class="about-info">
+          <p><strong>Contact Number:</strong> <span id="contactNumber">+1-234-567-890</span></p>
+          <p><strong>Email:</strong> <span id="email">info@example.com</span></p>
+          <p><strong>Instagram:</strong> <a href="https://instagram.com/example" target="_blank">@example</a></p>
         </div>
       </section>
 
