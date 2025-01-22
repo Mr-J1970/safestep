@@ -200,3 +200,52 @@ color: white;
   h7{
     color: black;
   }
+/* Add to your existing CSS */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.product h4 {
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.product button {
+  margin: 5px 0;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product button.add-to-cart {
+  background-color: #4caf50;
+  color: white;
+}
+
+.product button.buy-now {
+  background-color: #2196f3;
+  color: white;
+}
+
