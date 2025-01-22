@@ -200,23 +200,25 @@ color: white;
   h7{
     color: black;
   }
-/* Add to your existing CSS */
 .product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   padding: 20px;
+  justify-content: space-around;
 }
 
 .product {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex: 1 1 calc(25% - 30px); /* Adjusts to fit 4 products per row */
+  max-width: calc(25% - 30px);
+  box-sizing: border-box;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 10px;
+  margin: 10px 0;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .product img {
@@ -248,4 +250,3 @@ color: white;
   background-color: #2196f3;
   color: white;
 }
-
