@@ -125,9 +125,9 @@ if (createAccountForm) {
             { name: "Hearing aids", image: "h.jpg", description: "Rechargeable Hearing Aids for Seniors, Behind-the-Ear Style, Clear Sound Quality, Long Battery Life, Comfortable Fit." },
             { name: "Lifting chair", image: "lift.jpg", description: "Power Lift Recliner Chair for Elderly, Remote-Controlled, Comfortable Plush Upholstery, Smooth Lifting Mechanism, Ideal for Seniors with Mobility Issues." },
             { name: "Cane", image: "cane.jpg", description: "Adjustable Walking Cane for Seniors, Lightweight Aluminum Frame, Ergonomic Handle for Comfort, Non-Slip Tip for Stability, Ideal for Everyday Use." },
-            { name: "Power scooters", image: "pw.jpg", description: "An eco-friendly product that saves energy." },
-            { name: "Product 8", image: "https://via.placeholder.com/150x100?text=Product+8", description: "A premium product built with high-grade materials." },
-            { name: "Product 9", image: "https://via.placeholder.com/150x100?text=Product+9", description: "An affordable product offering great value." },
+            { name: "Power scooters", image: "pw.jpg", description: "Heavy-Duty Power Scooter for Adults, High Weight Capacity, Adjustable Speed Settings, Padded Seat and Backrest, Perfect for Long." },
+            { name: "Hospital bed", image: "bed.jpg", description: "Manual Hospital Bed for Seniors, Adjustable Head and Foot Sections, Easy-to-Operate Crank Mechanism, Durable Construction for Home or Medical Use" },
+            { name: "Prosthetic Arm", image: "arm.jpg", description: "Custom Prosthetic Arm for Upper Limb Amputees, Lightweight and Durable, Adjustable Fit for Comfort, Advanced Grip Technology for Enhanced Functionality" },
             { name: "Product 10", image: "https://via.placeholder.com/150x100?text=Product+10", description: "A reliable product trusted by professionals." }
         ];
 
