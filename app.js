@@ -175,13 +175,13 @@ style.innerHTML = `
         box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     }
 
-    .product-image-wrapper {
-        width: 150px;
-        height: 100px;
-        overflow: hidden;
-        border-radius: 8px;
-        margin-bottom: 10px;
-    }
+.product-image-wrapper {
+    width: 150px; /* Set a fixed width */
+    height: 100px; /* Set a fixed height */
+    overflow: hidden; /* Hide parts of the image that go outside this area */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    margin-bottom: 10px; /* Add spacing below the image */
+}
 
     .product-image {
         width: 100%;
