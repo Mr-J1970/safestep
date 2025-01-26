@@ -2,17 +2,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const signInForm = document.getElementById("signInForm");
     const createAccountForm = document.getElementById("createAccountForm");
     const createAccountLink = document.getElementById("createAccountLink");
-  
+
     // Function to save user data to localStorage
     const saveAccount = (username, email, password) => {
         localStorage.setItem("userAccount", JSON.stringify({ username, email, password }));
     };
-  
+
     // Function to retrieve user data from localStorage
     const getAccount = () => {
         return JSON.parse(localStorage.getItem("userAccount"));
     };
-  
+
     // Redirect to a given page
     const redirectToPage = (url, username) => {
         if (username) {
@@ -20,22 +20,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         window.location.href = url;
     };
-  
+
     // Handle sign-in form submission
     if (signInForm) {
         signInForm.addEventListener("submit", (event) => {
             event.preventDefault();
-  
+
             const email = document.getElementById("email").value.trim();
             const password = document.getElementById("password").value;
-  
+
             const savedAccount = getAccount();
-  
+
             if (!savedAccount) {
                 alert("Account doesn't exist. Please create an account.");
                 return;
             }
-  
+
             if (email === savedAccount.email && password === savedAccount.password) {
                 alert(`Welcome back, ${savedAccount.username}!`);
                 redirectToPage("dashboard.html", savedAccount.username);
@@ -44,16 +44,16 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-  
+
     // Handle account creation form submission
     if (createAccountForm) {
         createAccountForm.addEventListener("submit", (event) => {
             event.preventDefault();
-  
+
             const username = document.getElementById("newUsername").value.trim();
             const email = document.getElementById("newEmail").value.trim();
             const password = document.getElementById("newPassword").value;
-  
+
             if (username && email && password) {
                 saveAccount(username, email, password);
                 alert("Account created successfully! Redirecting to the dashboard...");
@@ -63,14 +63,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-  
+
     // Redirect to account creation page
     if (createAccountLink) {
         createAccountLink.addEventListener("click", () => {
             redirectToPage("s.html");
         });
     }
-  
+
     // Update dashboard username if on dashboard.html
     if (window.location.pathname.includes("dashboard.html")) {
         const savedUser = localStorage.getItem("loggedInUser");
@@ -81,24 +81,24 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }
-  
+
     const menuItems = document.querySelectorAll(".menu ul li");
     const sections = document.querySelectorAll(".content-section");
     const productList = document.getElementById("productList");
     const aboutInfoSection = document.getElementById("aboutInfo");
-  
+
     // Function to switch sections
     menuItems.forEach((item) => {
         item.addEventListener("click", () => {
             menuItems.forEach((i) => i.classList.remove("active"));
             sections.forEach((section) => section.classList.remove("active"));
-  
+
             item.classList.add("active");
             const targetSection = document.getElementById(item.getAttribute("data-target"));
             if (targetSection) {
                 targetSection.classList.add("active");
             }
-  
+
             // Handle specific section actions
             if (item.getAttribute("data-target") === "today-tasks") {
                 loadProducts();
@@ -107,51 +107,38 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
-  
+
     // Load products into the "Available Products" section
     const loadProducts = () => {
         productList.innerHTML = ""; // Clear the product list
-  
-        const productImages = [
-            "https://via.placeholder.com/150x100?text=Product+1",
-            "https://via.placeholder.com/150x100?text=Product+2",
-            "https://via.placeholder.com/150x100?text=Product+3",
-            "https://via.placeholder.com/150x100?text=Product+4",
-            "https://via.placeholder.com/150x100?text=Product+5",
-            "https://via.placeholder.com/150x100?text=Product+6",
-            "https://via.placeholder.com/150x100?text=Product+7",
-            "https://via.placeholder.com/150x100?text=Product+8",
-            "https://via.placeholder.com/150x100?text=Product+9",
-            "https://via.placeholder.com/150x100?text=Product+10"
-        ];
-  // Products data
-const products = [
-  { name: "Product 1", image: "product1.jpg", description: "A high-quality product to meet your needs." },
-  { name: "Product 2", image: "product2.jpg", description: "A versatile product perfect for everyday use." },
-  { name: "Product 3", image: "product3.jpg", description: "A durable and reliable product for long-term use." },
-  { name: "Product 4", image: "product4.jpg", description: "An innovative product designed for modern consumers." },
-  { name: "Product 5", image: "product5.jpg", description: "A compact product with exceptional performance." },
-  { name: "Product 6", image: "product6.jpg", description: "A stylish and modern product for your needs." },
-  { name: "Product 7", image: "product7.jpg", description: "An eco-friendly product that saves energy." },
-  { name: "Product 8", image: "product8.jpg", description: "A premium product built with high-grade materials." },
-  { name: "Product 9", image: "product9.jpg", description: "An affordable product offering great value." },
-  { name: "Product 10", image: "product10.jpg", description: "A reliable product trusted by professionals." }
-];
 
-// Generate product cards
-const productList = document.getElementById("productList");
-products.forEach((product, index) => {
-  const productCard = document.createElement("div");
-  productCard.className = "product";
-  productCard.innerHTML = `
-    <img src="${product.image}" alt="${product.name}">
-    <h4>${product.name}</h4>
-    <button class="add-to-cart" onclick="addToCart(${index})">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-  `;
-  productList.appendChild(productCard);
-});
-  
+        const products = [
+            { name: "Product 1", image: "https://via.placeholder.com/150x100?text=Product+1", description: "A high-quality product to meet your needs." },
+            { name: "Product 2", image: "https://via.placeholder.com/150x100?text=Product+2", description: "A versatile product perfect for everyday use." },
+            { name: "Product 3", image: "https://via.placeholder.com/150x100?text=Product+3", description: "A durable and reliable product for long-term use." },
+            { name: "Product 4", image: "https://via.placeholder.com/150x100?text=Product+4", description: "An innovative product designed for modern consumers." },
+            { name: "Product 5", image: "https://via.placeholder.com/150x100?text=Product+5", description: "A compact product with exceptional performance." },
+            { name: "Product 6", image: "https://via.placeholder.com/150x100?text=Product+6", description: "A stylish and modern product for your needs." },
+            { name: "Product 7", image: "https://via.placeholder.com/150x100?text=Product+7", description: "An eco-friendly product that saves energy." },
+            { name: "Product 8", image: "https://via.placeholder.com/150x100?text=Product+8", description: "A premium product built with high-grade materials." },
+            { name: "Product 9", image: "https://via.placeholder.com/150x100?text=Product+9", description: "An affordable product offering great value." },
+            { name: "Product 10", image: "https://via.placeholder.com/150x100?text=Product+10", description: "A reliable product trusted by professionals." }
+        ];
+
+        products.forEach((product, index) => {
+            const productCard = document.createElement("div");
+            productCard.className = "product";
+            productCard.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h4>${product.name}</h4>
+                <p>${product.description}</p>
+                <button class="add-to-cart" onclick="addToCart(${index})">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow(${index})">Buy Now</button>
+            `;
+            productList.appendChild(productCard);
+        });
+    };
+
     // Load About Us info
     const loadAboutInfo = () => {
         aboutInfoSection.innerHTML = `
@@ -160,16 +147,49 @@ products.forEach((product, index) => {
             <p>Instagram: <a href="https://instagram.com/example" target="_blank">@example</a></p>
         `;
     };
-  
+
     // Default load of products when the page loads
     loadProducts();
 });
-//addd to cart function
+
+// Add to Cart functionality
 function addToCart(index) {
-  const product = products[index];
-  const message = `Hi, I want to purchase: ${product.name}`;
-  const whatsappURL = `https://wa.me/918921750844?text=${encodeURIComponent(message)}`;
-  window.open(whatsappURL, "_blank");
+    const products = [
+        { name: "Product 1" },
+        { name: "Product 2" },
+        { name: "Product 3" },
+        { name: "Product 4" },
+        { name: "Product 5" },
+        { name: "Product 6" },
+        { name: "Product 7" },
+        { name: "Product 8" },
+        { name: "Product 9" },
+        { name: "Product 10" }
+    ];
+    const product = products[index];
+    const message = `Hi, I want to purchase: ${product.name}`;
+    const whatsappURL = `https://wa.me/918921750844?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, "_blank");
+}
+
+// Buy Now functionality
+function buyNow(index) {
+    const products = [
+        { name: "Product 1" },
+        { name: "Product 2" },
+        { name: "Product 3" },
+        { name: "Product 4" },
+        { name: "Product 5" },
+        { name: "Product 6" },
+        { name: "Product 7" },
+        { name: "Product 8" },
+        { name: "Product 9" },
+        { name: "Product 10" }
+    ];
+    const product = products[index];
+    const message = `Hi, I am interested in buying immediately: ${product.name}`;
+    const whatsappURL = `https://wa.me/918921750844?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, "_blank");
 }
     
   
