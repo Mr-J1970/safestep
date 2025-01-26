@@ -126,10 +126,16 @@ document.addEventListener("DOMContentLoaded", () => {
         ];
   // Products data
 const products = [
-  { name: "Product 1", image: "product1.jpg" },
-  { name: "Product 2", image: "product2.jpg" },
-  { name: "Product 3", image: "product3.jpg" },
-  { name: "Product 4", image: "product4.jpg" },
+  { name: "Product 1", image: "product1.jpg", description: "A high-quality product to meet your needs." },
+  { name: "Product 2", image: "product2.jpg", description: "A versatile product perfect for everyday use." },
+  { name: "Product 3", image: "product3.jpg", description: "A durable and reliable product for long-term use." },
+  { name: "Product 4", image: "product4.jpg", description: "An innovative product designed for modern consumers." },
+  { name: "Product 5", image: "product5.jpg", description: "A compact product with exceptional performance." },
+  { name: "Product 6", image: "product6.jpg", description: "A stylish and modern product for your needs." },
+  { name: "Product 7", image: "product7.jpg", description: "An eco-friendly product that saves energy." },
+  { name: "Product 8", image: "product8.jpg", description: "A premium product built with high-grade materials." },
+  { name: "Product 9", image: "product9.jpg", description: "An affordable product offering great value." },
+  { name: "Product 10", image: "product10.jpg", description: "A reliable product trusted by professionals." }
 ];
 
 // Generate product cards
