@@ -118,37 +118,18 @@ if (createAccountForm) {
     const loadProducts = () => {
         productList.innerHTML = ""; // Clear the product list
 
-// Product data in a separate array for easy modification and expansion
-const products = [
-    { name: "Stretcher", image: "s.jpg", description: "Heavy Duty Stretcher for Patient Transport, Foldable & Portable, Adjustable Height for Easy Movement, Medical Rescue Equipment." },
-    { name: "Wheelchair", image: "w.jpg", description: "Foldable Wheelchair for Easy Mobility, Lightweight Aluminum Frame, Adjustable Footrests, Comfortable Padded Seat, Ideal for Travel and Home Use." },
-    { name: "Prosthetic limbs", image: "l.jpg", description: "Prosthetic Arm for Upper Limb Amputees, Flexible Design, High-Performance Grip, Adjustable Socket for Optimal Fit, Comfortable and Functional." },
-    { name: "Hearing aids", image: "h.jpg", description: "Rechargeable Hearing Aids for Seniors, Behind-the-Ear Style, Clear Sound Quality, Long Battery Life, Comfortable Fit." },
-    { name: "Lifting chair", image: "lift.jpg", description: "Power Lift Recliner Chair for Elderly, Remote-Controlled, Comfortable Plush Upholstery, Smooth Lifting Mechanism, Ideal for Seniors with Mobility Issues." },
-    { name: "Cane", image: "cane.jpg", description: "Adjustable Walking Cane for Seniors, Lightweight Aluminum Frame, Ergonomic Handle for Comfort, Non-Slip Tip for Stability, Ideal for Everyday Use." },
-    { name: "Power scooters", image: "pw.jpg", description: "Heavy-Duty Power Scooter for Adults, High Weight Capacity, Adjustable Speed Settings, Padded Seat and Backrest, Perfect for Long." },
-    { name: "Hospital bed", image: "bed.jpg", description: "Manual Hospital Bed for Seniors, Adjustable Head and Foot Sections, Easy-to-Operate Crank Mechanism, Durable Construction for Home or Medical Use" },
-    { name: "Prosthetic Arm", image: "arm.jpg", description: "Custom Prosthetic Arm for Upper Limb Amputees, Lightweight and Durable, Adjustable Fit for Comfort, Advanced Grip Technology for Enhanced Functionality" },
-    { name: "Product 10", image: "https://via.placeholder.com/150x100?text=Product+10", description: "A reliable product trusted by professionals." }
-];
-
-// Function to create product HTML
-const createProductHTML = (product) => `
-    <div class="product">
-        <img src="${product.image}" alt="${product.name}" class="product-image"/>
-        <h3 class="product-name">${product.name}</h3>
-        <p class="product-description">${product.description}</p>
-    </div>
-`;
-
-// Function to load products into the "Available Products" section
-const loadProducts = () => {
-    productList.innerHTML = ""; // Clear the product list
-    productList.innerHTML = products.map(createProductHTML).join('');
-};
-
-// Call the function to load products
-loadProducts();
+        const products = [
+            { name: "Stretcher", image: "s.jpg", description: "Heavy Duty Stretcher for Patient Transport, Foldable & Portable, Adjustable Height for Easy Movement, Medical Rescue Equipment." },
+            { name: "Wheelchair", image: "w.jpg", description: "Foldable Wheelchair for Easy Mobility, Lightweight Aluminum Frame, Adjustable Footrests, Comfortable Padded Seat, Ideal for Travel and Home Use." },
+            { name: "Prosthetic limbs", image: "l.jpg", description: "Prosthetic Arm for Upper Limb Amputees, Flexible Design, High-Performance Grip, Adjustable Socket for Optimal Fit, Comfortable and Functional." },
+            { name: "Hearing aids", image: "h.jpg", description: "Rechargeable Hearing Aids for Seniors, Behind-the-Ear Style, Clear Sound Quality, Long Battery Life, Comfortable Fit." },
+            { name: "Lifting chair", image: "lift.jpg", description: "Power Lift Recliner Chair for Elderly, Remote-Controlled, Comfortable Plush Upholstery, Smooth Lifting Mechanism, Ideal for Seniors with Mobility Issues." },
+            { name: "Cane", image: "cane.jpg", description: "Adjustable Walking Cane for Seniors, Lightweight Aluminum Frame, Ergonomic Handle for Comfort, Non-Slip Tip for Stability, Ideal for Everyday Use." },
+            { name: "Power scooters", image: "pw.jpg", description: "Heavy-Duty Power Scooter for Adults, High Weight Capacity, Adjustable Speed Settings, Padded Seat and Backrest, Perfect for Long." },
+            { name: "Hospital bed", image: "bed.jpg", description: "Manual Hospital Bed for Seniors, Adjustable Head and Foot Sections, Easy-to-Operate Crank Mechanism, Durable Construction for Home or Medical Use" },
+            { name: "Prosthetic Arm", image: "arm.jpg", description: "Custom Prosthetic Arm for Upper Limb Amputees, Lightweight and Durable, Adjustable Fit for Comfort, Advanced Grip Technology for Enhanced Functionality" },
+            { name: "Product 10", image: "https://via.placeholder.com/150x100?text=Product+10", description: "A reliable product trusted by professionals." }
+        ];
 
 products.forEach((product, index) => {
     const productCard = document.createElement("div");
@@ -170,9 +151,9 @@ products.forEach((product, index) => {
     // Load About Us info
     const loadAboutInfo = () => {
         aboutInfoSection.innerHTML = `
-            <p>Contact Number: +1 234 567 8901</p>
-            <p>Email: support@example.com</p>
-            <p>Instagram: <a href="https://instagram.com/example" target="_blank">@example</a></p>
+            <p>Contact Number: +91 8921750844</p>
+            <p>Email: <a href="mailto:swarajks93@gmail.com">swarajks93@gmail.com</a></p>
+            <p>Instagram: <a href="https://instagram.com/swaraj_r7" target="_blank">@swaraj_r7</a></p>
         `;
     };
 
@@ -183,15 +164,15 @@ products.forEach((product, index) => {
 // Add to Cart functionality
 function addToCart(index) {
     const products = [
-        { name: "Product 1" },
-        { name: "Product 2" },
-        { name: "Product 3" },
-        { name: "Product 4" },
-        { name: "Product 5" },
-        { name: "Product 6" },
-        { name: "Product 7" },
-        { name: "Product 8" },
-        { name: "Product 9" },
+            { name: "Stretcher" },
+        { name: "Wheelchair" },
+        { name: "Prosthetic limbs" },
+        { name: "Hearing aids" },
+        { name: "Lifting chair" },
+        { name: "Cane" },
+        { name: "Power scooters" },
+        { name: "Hospital bed" },
+        { name: "Prosthetic Arm" },
         { name: "Product 10" }
     ];
     const product = products[index];
@@ -203,15 +184,15 @@ function addToCart(index) {
 // Buy Now functionality
 function buyNow(index) {
     const products = [
-        { name: "Product 1" },
-        { name: "Product 2" },
-        { name: "Product 3" },
-        { name: "Product 4" },
-        { name: "Product 5" },
-        { name: "Product 6" },
-        { name: "Product 7" },
-        { name: "Product 8" },
-        { name: "Product 9" },
+          { name: "Stretcher" },
+        { name: "Wheelchair" },
+        { name: "Prosthetic limbs" },
+        { name: "Hearing aids" },
+        { name: "Lifting chair" },
+        { name: "Cane" },
+        { name: "Power scooters" },
+        { name: "Hospital bed" },
+        { name: "Prosthetic Arm" },
         { name: "Product 10" }
     ];
     const product = products[index];
