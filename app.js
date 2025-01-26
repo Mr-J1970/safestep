@@ -115,38 +115,132 @@ if (createAccountForm) {
     });
 
     // Load products into the "Available Products" section
-    const loadProducts = () => {
-        productList.innerHTML = ""; // Clear the product list
+const loadProducts = () => {
+    productList.innerHTML = ""; // Clear the product list
 
-        const products = [
-            { name: "Stretcher", image: "s.jpg", description: "Heavy Duty Stretcher for Patient Transport, Foldable & Portable, Adjustable Height for Easy Movement, Medical Rescue Equipment." },
-            { name: "Wheelchair", image: "w.jpg", description: "Foldable Wheelchair for Easy Mobility, Lightweight Aluminum Frame, Adjustable Footrests, Comfortable Padded Seat, Ideal for Travel and Home Use." },
-            { name: "Prosthetic limbs", image: "l.jpg", description: "Prosthetic Arm for Upper Limb Amputees, Flexible Design, High-Performance Grip, Adjustable Socket for Optimal Fit, Comfortable and Functional." },
-            { name: "Hearing aids", image: "h.jpg", description: "Rechargeable Hearing Aids for Seniors, Behind-the-Ear Style, Clear Sound Quality, Long Battery Life, Comfortable Fit." },
-            { name: "Lifting chair", image: "lift.jpg", description: "Power Lift Recliner Chair for Elderly, Remote-Controlled, Comfortable Plush Upholstery, Smooth Lifting Mechanism, Ideal for Seniors with Mobility Issues." },
-            { name: "Cane", image: "cane.jpg", description: "Adjustable Walking Cane for Seniors, Lightweight Aluminum Frame, Ergonomic Handle for Comfort, Non-Slip Tip for Stability, Ideal for Everyday Use." },
-            { name: "Power scooters", image: "pw.jpg", description: "Heavy-Duty Power Scooter for Adults, High Weight Capacity, Adjustable Speed Settings, Padded Seat and Backrest, Perfect for Long." },
-            { name: "Hospital bed", image: "bed.jpg", description: "Manual Hospital Bed for Seniors, Adjustable Head and Foot Sections, Easy-to-Operate Crank Mechanism, Durable Construction for Home or Medical Use" },
-            { name: "Prosthetic Arm", image: "arm.jpg", description: "Custom Prosthetic Arm for Upper Limb Amputees, Lightweight and Durable, Adjustable Fit for Comfort, Advanced Grip Technology for Enhanced Functionality" },
-            { name: "Product 10", image: "https://via.placeholder.com/150x100?text=Product+10", description: "A reliable product trusted by professionals." }
-        ];
+    const products = [
+        { name: "Stretcher", image: "s.jpg", description: "Heavy Duty Stretcher for Patient Transport, Foldable & Portable, Adjustable Height for Easy Movement, Medical Rescue Equipment." },
+        { name: "Wheelchair", image: "w.jpg", description: "Foldable Wheelchair for Easy Mobility, Lightweight Aluminum Frame, Adjustable Footrests, Comfortable Padded Seat, Ideal for Travel and Home Use." },
+        { name: "Prosthetic limbs", image: "l.jpg", description: "Prosthetic Arm for Upper Limb Amputees, Flexible Design, High-Performance Grip, Adjustable Socket for Optimal Fit, Comfortable and Functional." },
+        { name: "Hearing aids", image: "h.jpg", description: "Rechargeable Hearing Aids for Seniors, Behind-the-Ear Style, Clear Sound Quality, Long Battery Life, Comfortable Fit." },
+        { name: "Lifting chair", image: "lift.jpg", description: "Power Lift Recliner Chair for Elderly, Remote-Controlled, Comfortable Plush Upholstery, Smooth Lifting Mechanism, Ideal for Seniors with Mobility Issues." },
+        { name: "Cane", image: "cane.jpg", description: "Adjustable Walking Cane for Seniors, Lightweight Aluminum Frame, Ergonomic Handle for Comfort, Non-Slip Tip for Stability, Ideal for Everyday Use." },
+        { name: "Power scooters", image: "pw.jpg", description: "Heavy-Duty Power Scooter for Adults, High Weight Capacity, Adjustable Speed Settings, Padded Seat and Backrest, Perfect for Long." },
+        { name: "Hospital bed", image: "bed.jpg", description: "Manual Hospital Bed for Seniors, Adjustable Head and Foot Sections, Easy-to-Operate Crank Mechanism, Durable Construction for Home or Medical Use" },
+        { name: "Prosthetic Arm", image: "arm.jpg", description: "Custom Prosthetic Arm for Upper Limb Amputees, Lightweight and Durable, Adjustable Fit for Comfort, Advanced Grip Technology for Enhanced Functionality" },
+        { name: "Product 10", image: "https://via.placeholder.com/150x100?text=Product+10", description: "A reliable product trusted by professionals." }
+    ];
 
-products.forEach((product, index) => {
-    const productCard = document.createElement("div");
-    productCard.className = "product";
-    productCard.innerHTML = `
-        <img src="${product.image}" alt="${product.name}" class="product-image">
-        <h4 class="product-name">${product.name}</h4>
-        <div class="product-buttons">
-            <button class="add-to-cart" onclick="addToCart(${index})">Add to Cart</button>
-            <button class="buy-now" onclick="buyNow(${index})">Buy Now</button>
-        </div>
-        <p class="product-description">${product.description}</p>
-    `;
-    productList.appendChild(productCard);
-});
+    products.forEach((product, index) => {
+        const productCard = document.createElement("div");
+        productCard.className = "product-card";
 
-    };
+        productCard.innerHTML = `
+            <div class="product-image-wrapper">
+                <img src="${product.image}" alt="${product.name}" class="product-image">
+            </div>
+            <div class="product-details">
+                <h4 class="product-name">${product.name}</h4>
+                <p class="product-description">${product.description}</p>
+                <div class="product-buttons">
+                    <button class="add-to-cart" onclick="addToCart(${index})">Add to Cart</button>
+                    <button class="buy-now" onclick="buyNow(${index})">Buy Now</button>
+                </div>
+            </div>
+        `;
+
+        productList.appendChild(productCard);
+    });
+};
+
+// Add CSS styles to enhance the layout
+const style = document.createElement("style");
+style.innerHTML = `
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        margin: 16px;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-image-wrapper {
+        width: 150px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .product-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .product-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .product-description {
+        font-size: 14px;
+        color: #555;
+        margin: 10px 0;
+    }
+
+    .product-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .product-buttons button {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .add-to-cart {
+        background-color: #28a745;
+        color: #fff;
+    }
+
+    .add-to-cart:hover {
+        background-color: #218838;
+    }
+
+    .buy-now {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .buy-now:hover {
+        background-color: #0056b3;
+    }
+`;
+document.head.appendChild(style);
+
 
     // Load About Us info
     const loadAboutInfo = () => {
