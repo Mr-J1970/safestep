@@ -152,7 +152,7 @@ products.forEach((product, index) => {
     const loadAboutInfo = () => {
         aboutInfoSection.innerHTML = `
             <p>Contact Number: +91 8921750844</p>
-            <p>Email: <a href="mailto:swarajks93@gmail.com">swarajks93@gmail.com</a></p>
+            <p>Email: <a href="mailto:swarajks93@gmail.com"> target="_blank">swarajks93@gmail.com</a></p>
             <p>Instagram: <a href="https://instagram.com/swaraj_r7" target="_blank">@swaraj_r7</a></p>
         `;
     };
