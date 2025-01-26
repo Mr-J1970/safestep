@@ -150,6 +150,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Default load of products when the page loads
     loadProducts();
 });
-
+function addToCart(index) {
+  const product = products[index];
+  const message = `Hi, I want to purchase: ${product.name}`;
+  const whatsappURL = `https://wa.me/918921750844?text=${encodeURIComponent(message)}`;
+  window.open(whatsappURL, "_blank");
+}
     
   
