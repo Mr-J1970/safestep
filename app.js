@@ -124,19 +124,27 @@ document.addEventListener("DOMContentLoaded", () => {
             "https://via.placeholder.com/150x100?text=Product+9",
             "https://via.placeholder.com/150x100?text=Product+10"
         ];
-  
-        productImages.forEach((imageUrl, index) => {
-            const product = document.createElement("div");
-            product.className = "product";
-            product.innerHTML = `
-                <img src="${imageUrl}" alt="Product ${index + 1}">
-                <h4>Product ${index + 1}</h4>
-                <button class="add-to-cart">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            `;
-            productList.appendChild(product);
-        });
-    };
+  // Products data
+const products = [
+  { name: "Product 1", image: "product1.jpg" },
+  { name: "Product 2", image: "product2.jpg" },
+  { name: "Product 3", image: "product3.jpg" },
+  { name: "Product 4", image: "product4.jpg" },
+];
+
+// Generate product cards
+const productList = document.getElementById("productList");
+products.forEach((product, index) => {
+  const productCard = document.createElement("div");
+  productCard.className = "product";
+  productCard.innerHTML = `
+    <img src="${product.image}" alt="${product.name}">
+    <h4>${product.name}</h4>
+    <button class="add-to-cart" onclick="addToCart(${index})">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+  `;
+  productList.appendChild(productCard);
+});
   
     // Load About Us info
     const loadAboutInfo = () => {
@@ -150,6 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Default load of products when the page loads
     loadProducts();
 });
+//addd to cart function
 function addToCart(index) {
   const product = products[index];
   const message = `Hi, I want to purchase: ${product.name}`;
