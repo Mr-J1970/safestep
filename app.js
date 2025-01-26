@@ -46,23 +46,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Handle account creation form submission
-    if (createAccountForm) {
-        createAccountForm.addEventListener("submit", (event) => {
-            event.preventDefault();
+    // Handle account creation form submission
+if (createAccountForm) {
+    createAccountForm.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-            const username = document.getElementById("newUsername").value.trim();
-            const email = document.getElementById("newEmail").value.trim();
-            const password = document.getElementById("newPassword").value;
+        const username = document.getElementById("newUsername")?.value.trim();
+        const email = document.getElementById("newEmail")?.value.trim();
+        const password = document.getElementById("newPassword")?.value;
 
-            if (username && email && password) {
-                saveAccount(username, email, password);
-                alert("Account created successfully! Redirecting to the dashboard...");
-                redirectToPage("dashboard.html", username);
-            } else {
-                alert("All fields are required to create an account.");
-            }
-        });
-    }
+        if (!username || !email || !password) {
+            alert("All fields are required to create an account.");
+            return;
+        }
+
+        // Save account to localStorage
+        saveAccount(username, email, password);
+        alert("Account created successfully! Redirecting to the dashboard...");
+
+        // Standard redirect
+        window.location.href = "dashboard.html?username=" + encodeURIComponent(username);
+    });
+}
+
 
     // Redirect to account creation page
     if (createAccountLink) {
