@@ -135,13 +135,13 @@ products.forEach((product, index) => {
     const productCard = document.createElement("div");
     productCard.className = "product";
     productCard.innerHTML = `
-        <h4 class="product-name">${product.name}</h4>
         <img src="${product.image}" alt="${product.name}" class="product-image">
-        <p class="product-description">${product.description}</p>
+        <h4 class="product-name">${product.name}</h4>
         <div class="product-buttons">
             <button class="add-to-cart" onclick="addToCart(${index})">Add to Cart</button>
             <button class="buy-now" onclick="buyNow(${index})">Buy Now</button>
         </div>
+        <p class="product-description">${product.description}</p>
     `;
     productList.appendChild(productCard);
 });
