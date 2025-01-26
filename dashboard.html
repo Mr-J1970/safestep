@@ -12,7 +12,6 @@
       padding: 0;
       background-color: #f4f4f9;
     }
-    
 
     .app {
       display: flex;
@@ -59,14 +58,13 @@
       background-color: #444;
     }
 
-    .img.safestep {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 20%; /* Set the width to 20% of the screen */
-      max-width: 100%;
-      height: auto; /* Maintain the aspect ratio */
-      z-index: 10;
+    .sidebar img.safestep {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 150px;
     }
 
     .main-content {
@@ -149,7 +147,7 @@
         <h8>Swaraj</h8>
         <hr>
       </div>
-            
+
       <nav class="menu">
         <ul>
           <li class="active" data-target="today-tasks" title="Today's Tasks">
@@ -166,6 +164,9 @@
           </li>
         </ul>
       </nav>
+
+      <!-- Safestep Image -->
+      <img src="safestep.jpg" alt="Safestep" class="safestep">
     </aside>
 
     <!-- Main Content -->
@@ -240,11 +241,6 @@
       </section>
     </main>
   </div>
-  <section id="today-tasks" class="content-section active">
-  <div id="productList" class="product-list"></div>
-</section>
-
-
   <script src="app.js"></script>
 </body>
 </html>
