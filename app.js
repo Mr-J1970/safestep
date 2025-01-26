@@ -132,17 +132,19 @@ if (createAccountForm) {
         ];
 
         products.forEach((product, index) => {
-            const productCard = document.createElement("div");
-            productCard.className = "product";
-            productCard.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
-                <h4>${product.name}</h4>
-                <p>${product.description}</p>
-                <button class="add-to-cart" onclick="addToCart(${index})">Add to Cart</button>
-                <button class="buy-now" onclick="buyNow(${index})">Buy Now</button>
-            `;
-            productList.appendChild(productCard);
-        });
+    const productCard = document.createElement("div");
+    productCard.className = "product";
+    productCard.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" class="product-image">
+        <h4 class="product-name">${product.name}</h4>
+        <p class="product-description">${product.description}</p>
+        <div class="product-buttons">
+            <button class="add-to-cart" onclick="addToCart(${index})">Add to Cart</button>
+            <button class="buy-now" onclick="buyNow(${index})">Buy Now</button>
+        </div>
+    `;
+    productList.appendChild(productCard);
+});
     };
 
     // Load About Us info
