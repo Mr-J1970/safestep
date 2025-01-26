@@ -119,8 +119,8 @@ if (createAccountForm) {
         productList.innerHTML = ""; // Clear the product list
 
         const products = [
-            { name: "Product 1", image: "s.jpg", description: "A high-quality product to meet your needs." },
-            { name: "Product 2", image: "https://via.placeholder.com/150x100?text=Product+2", description: "A versatile product perfect for everyday use." },
+            { name: "Stretcher", image: "s.jpg", description: "Heavy Duty Stretcher for Patient Transport, Foldable & Portable, Adjustable Height for Easy Movement, Medical Rescue Equipment." },
+            { name: "Wheelchair", image: "w.jpg", description: "Foldable Wheelchair for Easy Mobility, Lightweight Aluminum Frame, Adjustable Footrests, Comfortable Padded Seat, Ideal for Travel and Home Use" },
             { name: "Product 3", image: "https://via.placeholder.com/150x100?text=Product+3", description: "A durable and reliable product for long-term use." },
             { name: "Product 4", image: "https://via.placeholder.com/150x100?text=Product+4", description: "An innovative product designed for modern consumers." },
             { name: "Product 5", image: "https://via.placeholder.com/150x100?text=Product+5", description: "A compact product with exceptional performance." },
