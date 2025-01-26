@@ -121,7 +121,7 @@ if (createAccountForm) {
         const products = [
             { name: "Stretcher", image: "s.jpg", description: "Heavy Duty Stretcher for Patient Transport, Foldable & Portable, Adjustable Height for Easy Movement, Medical Rescue Equipment." },
             { name: "Wheelchair", image: "w.jpg", description: "Foldable Wheelchair for Easy Mobility, Lightweight Aluminum Frame, Adjustable Footrests, Comfortable Padded Seat, Ideal for Travel and Home Use" },
-            { name: "Product 3", image: "https://via.placeholder.com/150x100?text=Product+3", description: "A durable and reliable product for long-term use." },
+            { name: "Prosthetic limbs", image: "l.jpg", description: "Prosthetic Arm for Upper Limb Amputees, Flexible Design, High-Performance Grip, Adjustable Socket for Optimal Fit, Comfortable and Functional." },
             { name: "Product 4", image: "https://via.placeholder.com/150x100?text=Product+4", description: "An innovative product designed for modern consumers." },
             { name: "Product 5", image: "https://via.placeholder.com/150x100?text=Product+5", description: "A compact product with exceptional performance." },
             { name: "Product 6", image: "https://via.placeholder.com/150x100?text=Product+6", description: "A stylish and modern product for your needs." },
