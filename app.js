@@ -123,86 +123,96 @@ const loadProducts = () => {
         name: "Stretcher", 
         image: "s.jpg", 
         description: "Heavy Duty Stretcher for Patient Transport, Foldable & Portable, Adjustable Height for Easy Movement, Medical Rescue Equipment.", 
-        price: 199 
+        price: 199, 
+        buyNowPrice: 220 
     },
     { 
         name: "Wheelchair", 
         image: "w.jpg", 
         description: "Foldable Wheelchair for Easy Mobility, Lightweight Aluminum Frame, Adjustable Footrests, Comfortable Padded Seat, Ideal for Travel and Home Use.", 
-        price: 299 
+        price: 299, 
+        buyNowPrice: 330 
     },
     { 
         name: "Prosthetic limbs", 
         image: "l.jpg", 
         description: "Prosthetic Arm for Upper Limb Amputees, Flexible Design, High-Performance Grip, Adjustable Socket for Optimal Fit, Comfortable and Functional.", 
-        price: 1500 
+        price: 1500, 
+        buyNowPrice: 1650 
     },
     { 
         name: "Hearing aids", 
         image: "h.jpg", 
         description: "Rechargeable Hearing Aids for Seniors, Behind-the-Ear Style, Clear Sound Quality, Long Battery Life, Comfortable Fit.", 
-        price: 499 
+        price: 499, 
+        buyNowPrice: 549 
     },
     { 
         name: "Lifting chair", 
         image: "lift.jpg", 
         description: "Power Lift Recliner Chair for Elderly, Remote-Controlled, Comfortable Plush Upholstery, Smooth Lifting Mechanism, Ideal for Seniors with Mobility Issues.", 
-        price: 799 
+        price: 799, 
+        buyNowPrice: 879 
     },
     { 
         name: "Cane", 
         image: "cane.jpg", 
         description: "Adjustable Walking Cane for Seniors, Lightweight Aluminum Frame, Ergonomic Handle for Comfort, Non-Slip Tip for Stability, Ideal for Everyday Use.", 
-        price: 45 
+        price: 45, 
+        buyNowPrice: 50 
     },
     { 
         name: "Power scooters", 
         image: "pw.jpg", 
         description: "Heavy-Duty Power Scooter for Adults, High Weight Capacity, Adjustable Speed Settings, Padded Seat and Backrest, Perfect for Long.", 
-        price: 1200 
+        price: 1200, 
+        buyNowPrice: 1300 
     },
     { 
         name: "Hospital bed", 
         image: "bed.jpg", 
         description: "Manual Hospital Bed for Seniors, Adjustable Head and Foot Sections, Easy-to-Operate Crank Mechanism, Durable Construction for Home or Medical Use.", 
-        price: 650 
+        price: 650, 
+        buyNowPrice: 700 
     },
     { 
         name: "Prosthetic Arm", 
         image: "arm.jpg", 
         description: "Custom Prosthetic Arm for Upper Limb Amputees, Lightweight and Durable, Adjustable Fit for Comfort, Advanced Grip Technology for Enhanced Functionality.", 
-        price: 1800 
+        price: 1800, 
+        buyNowPrice: 2000 
     },
     { 
         name: "Product 10", 
         image: "https://via.placeholder.com/150x100?text=Product+10", 
         description: "A reliable product trusted by professionals.", 
-        price: 100 
+        price: 100, 
+        buyNowPrice: 120 
     }
 ];
 
+products.forEach((product, index) => {
+    const productCard = document.createElement("div");
+    productCard.className = "product-card";
 
-    products.forEach((product, index) => {
-        const productCard = document.createElement("div");
-        productCard.className = "product-card";
-
-        productCard.innerHTML = `
-            <div class="product-image-wrapper">
-                <img src="${product.image}" alt="${product.name}" class="product-image">
+    productCard.innerHTML = `
+        <div class="product-image-wrapper">
+            <img src="${product.image}" alt="${product.name}" class="product-image">
+        </div>
+        <h3 class="product-price">₹${product.price}</h3> <!-- Price in Indian Rupees -->
+        <div class="product-details">
+            <h4 class="product-name">${product.name}</h4>
+            <p class="product-description">${product.description}</p>
+            <div class="product-buttons">
+                <button class="add-to-cart" onclick="addToCart(${index})">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow(${index})">Buy Now ₹${product.buyNowPrice}</button>
             </div>
-            <div class="product-details">
-            <h3 class="p-price">${product.price}</h3>
-                <h4 class="product-name">${product.name}</h4>
-                <p class="product-description">${product.description}</p>
-                <div class="product-buttons">
-                    <button class="add-to-cart" onclick="addToCart(${index})">Add to Cart</button>
-                    <button class="buy-now" onclick="buyNow(${index})">Buy Now</button>
-                </div>
-            </div>
-        `;
+        </div>
+    `;
 
-        productList.appendChild(productCard);
-    });
+    productList.appendChild(productCard);
+});
+
 };
 
 // Add CSS styles to enhance the layout
