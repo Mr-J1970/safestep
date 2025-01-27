@@ -202,10 +202,6 @@ products.forEach((product, index) => {
         </div>
     `;
 
-    productList.appendChild(productCard);
-});
-
-
         productList.appendChild(productCard);
     });
 };
