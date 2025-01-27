@@ -115,102 +115,96 @@ if (createAccountForm) {
     });
 
     // Load products into the "Available Products" section
-const products = [
+const loadProducts = () => {
+    productList.innerHTML = ""; // Clear the product list
+
+    const products = [
     { 
         name: "Stretcher", 
         image: "s.jpg", 
         description: "Heavy Duty Stretcher for Patient Transport, Foldable & Portable, Adjustable Height for Easy Movement, Medical Rescue Equipment.", 
-        price: 2000, 
-        buyNowPrice: 2220 
+        price: 199 
     },
     { 
         name: "Wheelchair", 
         image: "w.jpg", 
         description: "Foldable Wheelchair for Easy Mobility, Lightweight Aluminum Frame, Adjustable Footrests, Comfortable Padded Seat, Ideal for Travel and Home Use.", 
-        price: 3000, 
-        buyNowPrice: 3330 
+        price: 299 
     },
     { 
         name: "Prosthetic limbs", 
         image: "l.jpg", 
         description: "Prosthetic Arm for Upper Limb Amputees, Flexible Design, High-Performance Grip, Adjustable Socket for Optimal Fit, Comfortable and Functional.", 
-        price: 34000, 
-        buyNowPrice: 34550 
+        price: 1500 
     },
     { 
         name: "Hearing aids", 
         image: "h.jpg", 
         description: "Rechargeable Hearing Aids for Seniors, Behind-the-Ear Style, Clear Sound Quality, Long Battery Life, Comfortable Fit.", 
-        price: 499, 
-        buyNowPrice: 650 
+        price: 499 
     },
     { 
         name: "Lifting chair", 
         image: "lift.jpg", 
         description: "Power Lift Recliner Chair for Elderly, Remote-Controlled, Comfortable Plush Upholstery, Smooth Lifting Mechanism, Ideal for Seniors with Mobility Issues.", 
-        price: 7999, 
-        buyNowPrice: 8799 
+        price: 799 
     },
     { 
         name: "Cane", 
         image: "cane.jpg", 
         description: "Adjustable Walking Cane for Seniors, Lightweight Aluminum Frame, Ergonomic Handle for Comfort, Non-Slip Tip for Stability, Ideal for Everyday Use.", 
-        price: 145, 
-        buyNowPrice: 250 
+        price: 45 
     },
     { 
         name: "Power scooters", 
         image: "pw.jpg", 
         description: "Heavy-Duty Power Scooter for Adults, High Weight Capacity, Adjustable Speed Settings, Padded Seat and Backrest, Perfect for Long.", 
-        price: 12000, 
-        buyNowPrice: 13000
+        price: 1200 
     },
     { 
         name: "Hospital bed", 
         image: "bed.jpg", 
         description: "Manual Hospital Bed for Seniors, Adjustable Head and Foot Sections, Easy-to-Operate Crank Mechanism, Durable Construction for Home or Medical Use.", 
-        price: 1500, 
-        buyNowPrice: 1700 
+        price: 650 
     },
     { 
         name: "Prosthetic Arm", 
         image: "arm.jpg", 
         description: "Custom Prosthetic Arm for Upper Limb Amputees, Lightweight and Durable, Adjustable Fit for Comfort, Advanced Grip Technology for Enhanced Functionality.", 
-        price: 18000, 
-        buyNowPrice: 20000 
+        price: 1800 
     },
     { 
         name: "Product 10", 
         image: "https://via.placeholder.com/150x100?text=Product+10", 
         description: "A reliable product trusted by professionals.", 
-        price: 100, 
-        buyNowPrice: 120 
+        price: 100 
     }
 ];
 
-products.forEach((product, index) => {
-    const productCard = document.createElement("div");
-    productCard.className = "product-card";
 
-    productCard.innerHTML = `
-        <div class="product-image-wrapper">
-            <img src="${product.image}" alt="${product.name}" class="product-image">
-        </div>
-        <h3 class="product-price">$${product.price}</h3> <!-- Price immediately after the image -->
-        <div class="product-details">
-            <h4 class="product-name">${product.name}</h4>
-            <p class="product-description">${product.description}</p>
-            <div class="product-buttons">
-                <button class="add-to-cart" onclick="addToCart(${index})">Add to Cart</button>
-                <button class="buy-now" onclick="buyNow(${index})">Buy Now ₹${product.buyNowPrice}</button>
+    products.forEach((product, index) => {
+        const productCard = document.createElement("div");
+        productCard.className = "product-card";
+
+        productCard.innerHTML = `
+            <div class="product-image-wrapper">
+                <img src="${product.image}" alt="${product.name}" class="product-image">
             </div>
-        </div>
-    `;
+            <div class="product-details">
+            <h3 class="p-price">${product.price}</h3>
+                <h4 class="product-name">${product.name}</h4>
+                <p class="product-description">${product.description}</p>
+                <div class="product-buttons">
+                    <button class="add-to-cart" onclick="addToCart(${index})">Add to Cart</button>
+                    <button class="buy-now" onclick="buyNow(${index})">Buy Now</button>
+                </div>
+            </div>
+        `;
 
-    productList.appendChild(productCard);
-});
-
+        productList.appendChild(productCard);
+    });
 };
+
 // Add CSS styles to enhance the layout
 const style = document.createElement("style");
 style.innerHTML = `
@@ -234,11 +228,11 @@ style.innerHTML = `
     }
 
 .product-image-wrapper {
-    width: 150px; 
-    height: 100px; 
-    overflow: hidden; 
-    border-radius: 8px; 
-    margin-bottom: 10px; 
+    width: 150px; /* Set a fixed width */
+    height: 100px; /* Set a fixed height */
+    overflow: hidden; /* Hide parts of the image that go outside this area */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    margin-bottom: 10px; /* Add spacing below the image */
 }
 
     .product-image {
@@ -260,13 +254,13 @@ style.innerHTML = `
     }
 
     .product-description {
-    font-size: 14px; 
-    line-height: 1.5; 
-    color: white; 
-    text-align: left; 
-    margin-top: 10px; 
-    max-width: 300px; 
-    overflow-wrap: break-word;
+    font-size: 14px; /* Uniform font size for all descriptions */
+    line-height: 1.5; /* Consistent spacing between lines */
+    color: white; /* Standardized color for readability */
+    text-align: left; /* Align text to the left */
+    margin-top: 10px; /* Space above the description for separation */
+    max-width: 300px; /* Optional: Limit the width for better alignment */
+    overflow-wrap: break-word; /* Handle long words gracefully */
 }
 
 
@@ -358,4 +352,3 @@ function buyNow(index) {
     window.open(whatsappURL, "_blank");
 }
     
-  
