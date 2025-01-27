@@ -195,7 +195,7 @@ const loadProducts = () => {
                 <p class="product-description">${product.description}</p>
                 <div class="product-buttons">
                     <button class="add-to-cart" onclick="addToCart(${index})">Add to Cart</button>
-                    <button class="buy-now" onclick="buyNow(${index})">Buy Now</button>
+                    <button class="buy-now" onclick="buyNow(${index})">Buy Now $29</button>
                 </div>
             </div>
         `;
