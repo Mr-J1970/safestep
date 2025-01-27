@@ -191,6 +191,7 @@ const loadProducts = () => {
                 <img src="${product.image}" alt="${product.name}" class="product-image">
             </div>
             <div class="product-details">
+            <h3 class="p-price">${product.price}</h3>
                 <h4 class="product-name">${product.name}</h4>
                 <p class="product-description">${product.description}</p>
                 <div class="product-buttons">
