@@ -119,17 +119,68 @@ const loadProducts = () => {
     productList.innerHTML = ""; // Clear the product list
 
     const products = [
-        { name: "Stretcher", image: "s.jpg",description:"$199",description: "Heavy Duty Stretcher for Patient Transport, Foldable & Portable, Adjustable Height for Easy Movement, Medical Rescue Equipment." },
-        { name: "Wheelchair", image: "w.jpg", description: "Foldable Wheelchair for Easy Mobility, Lightweight Aluminum Frame, Adjustable Footrests, Comfortable Padded Seat, Ideal for Travel and Home Use." },
-        { name: "Prosthetic limbs", image: "l.jpg", description: "Prosthetic Arm for Upper Limb Amputees, Flexible Design, High-Performance Grip, Adjustable Socket for Optimal Fit, Comfortable and Functional." },
-        { name: "Hearing aids", image: "h.jpg", description: "Rechargeable Hearing Aids for Seniors, Behind-the-Ear Style, Clear Sound Quality, Long Battery Life, Comfortable Fit." },
-        { name: "Lifting chair", image: "lift.jpg", description: "Power Lift Recliner Chair for Elderly, Remote-Controlled, Comfortable Plush Upholstery, Smooth Lifting Mechanism, Ideal for Seniors with Mobility Issues." },
-        { name: "Cane", image: "cane.jpg", description: "Adjustable Walking Cane for Seniors, Lightweight Aluminum Frame, Ergonomic Handle for Comfort, Non-Slip Tip for Stability, Ideal for Everyday Use." },
-        { name: "Power scooters", image: "pw.jpg", description: "Heavy-Duty Power Scooter for Adults, High Weight Capacity, Adjustable Speed Settings, Padded Seat and Backrest, Perfect for Long." },
-        { name: "Hospital bed", image: "bed.jpg", description: "Manual Hospital Bed for Seniors, Adjustable Head and Foot Sections, Easy-to-Operate Crank Mechanism, Durable Construction for Home or Medical Use" },
-        { name: "Prosthetic Arm", image: "arm.jpg", description: "Custom Prosthetic Arm for Upper Limb Amputees, Lightweight and Durable, Adjustable Fit for Comfort, Advanced Grip Technology for Enhanced Functionality" },
-        { name: "Product 10", image: "https://via.placeholder.com/150x100?text=Product+10", description: "A reliable product trusted by professionals." }
-    ];
+    { 
+        name: "Stretcher", 
+        image: "s.jpg", 
+        description: "Heavy Duty Stretcher for Patient Transport, Foldable & Portable, Adjustable Height for Easy Movement, Medical Rescue Equipment.", 
+        price: 199 
+    },
+    { 
+        name: "Wheelchair", 
+        image: "w.jpg", 
+        description: "Foldable Wheelchair for Easy Mobility, Lightweight Aluminum Frame, Adjustable Footrests, Comfortable Padded Seat, Ideal for Travel and Home Use.", 
+        price: 299 
+    },
+    { 
+        name: "Prosthetic limbs", 
+        image: "l.jpg", 
+        description: "Prosthetic Arm for Upper Limb Amputees, Flexible Design, High-Performance Grip, Adjustable Socket for Optimal Fit, Comfortable and Functional.", 
+        price: 1500 
+    },
+    { 
+        name: "Hearing aids", 
+        image: "h.jpg", 
+        description: "Rechargeable Hearing Aids for Seniors, Behind-the-Ear Style, Clear Sound Quality, Long Battery Life, Comfortable Fit.", 
+        price: 499 
+    },
+    { 
+        name: "Lifting chair", 
+        image: "lift.jpg", 
+        description: "Power Lift Recliner Chair for Elderly, Remote-Controlled, Comfortable Plush Upholstery, Smooth Lifting Mechanism, Ideal for Seniors with Mobility Issues.", 
+        price: 799 
+    },
+    { 
+        name: "Cane", 
+        image: "cane.jpg", 
+        description: "Adjustable Walking Cane for Seniors, Lightweight Aluminum Frame, Ergonomic Handle for Comfort, Non-Slip Tip for Stability, Ideal for Everyday Use.", 
+        price: 45 
+    },
+    { 
+        name: "Power scooters", 
+        image: "pw.jpg", 
+        description: "Heavy-Duty Power Scooter for Adults, High Weight Capacity, Adjustable Speed Settings, Padded Seat and Backrest, Perfect for Long.", 
+        price: 1200 
+    },
+    { 
+        name: "Hospital bed", 
+        image: "bed.jpg", 
+        description: "Manual Hospital Bed for Seniors, Adjustable Head and Foot Sections, Easy-to-Operate Crank Mechanism, Durable Construction for Home or Medical Use.", 
+        price: 650 
+    },
+    { 
+        name: "Prosthetic Arm", 
+        image: "arm.jpg", 
+        description: "Custom Prosthetic Arm for Upper Limb Amputees, Lightweight and Durable, Adjustable Fit for Comfort, Advanced Grip Technology for Enhanced Functionality.", 
+        price: 1800 
+    },
+    { 
+        name: "Product 10", 
+        image: "https://via.placeholder.com/150x100?text=Product+10", 
+        description: "A reliable product trusted by professionals.", 
+        price: 100 
+    }
+];
+
 
     products.forEach((product, index) => {
         const productCard = document.createElement("div");
