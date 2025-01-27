@@ -255,7 +255,7 @@ style.innerHTML = `
     .product-description {
     font-size: 14px; /* Uniform font size for all descriptions */
     line-height: 1.5; /* Consistent spacing between lines */
-    color: #555; /* Standardized color for readability */
+    color: white; /* Standardized color for readability */
     text-align: left; /* Align text to the left */
     margin-top: 10px; /* Space above the description for separation */
     max-width: 300px; /* Optional: Limit the width for better alignment */
