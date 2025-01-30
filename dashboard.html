@@ -12,6 +12,74 @@
       padding: 0;
       background-color: #f4f4f9;
     }
+      .edit-profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+
+    .edit-profile img {
+      width: 20px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      background: white;
+      padding: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+    }
+
+    .modal.show {
+      display: block;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .modal-content input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .modal-footer {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .modal-footer button {
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .save-btn {
+      background-color: var(--accent-color);
+      color: white;
+    }
+
+    .close-btn {
+      background-color: #ccc;
+    }
 
     .app {
       display: flex;
