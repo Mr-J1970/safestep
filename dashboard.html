@@ -6,41 +6,51 @@
   <title>Safestep</title>
   <link rel="stylesheet" href="st.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
+    :root {
+      --primary-bg: #f4f4f9;
+      --sidebar-bg: grey;
+      --sidebar-text: white;
+      --accent-color: #ca8bfe;
+      --transition: 0.4s ease-in-out;
     }
 
-    .app {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
       display: flex;
       height: 100vh;
+      background-color: var(--primary-bg);
     }
 
     .sidebar {
       width: 20%;
-      background-color: grey;
-      color: #fff;
+      background-color: var(--sidebar-bg);
+      color: var(--sidebar-text);
       display: flex;
       flex-direction: column;
-      position: relative;
-    }
-
-    .profile {
-      text-align: center;
+      align-items: center;
       padding: 20px;
     }
 
     .profile img {
-      width: 50px;
+      width: 60px;
       border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .menu {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
     }
 
     .menu ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
+      list-style: none;
     }
 
     .menu li {
@@ -48,54 +58,35 @@
       cursor: pointer;
       display: flex;
       align-items: center;
+      justify-content: center;
+      transition: var(--transition);
     }
 
-    .menu li img {
-      margin-right: 10px;
-    }
-
+    .menu li:hover,
     .menu li.active {
       background-color: #444;
     }
 
-    .sidebar img.safestep {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 200px;
-      height: 250px;
+    .safestep-logo {
+      margin-top: auto;
+      width: 180px;
     }
 
     .main-content {
       flex: 1;
-      padding: 20px;
+      padding: 30px;
       overflow-y: auto;
     }
 
     .settings-category {
-      margin-top: 20px;
-    }
-
-    .settings-category h2 img {
-      vertical-align: middle;
-      margin-right: 10px;
-    }
-
-    .notification-settings,
-    .more-options {
-      margin-top: 20px;
-    }
-
-    .more-options select {
-      margin: 10px 0;
+      margin: 20px 0;
     }
 
     .switch {
       position: relative;
       display: inline-block;
-      width: 60px;
-      height: 34px;
+      width: 50px;
+      height: 24px;
     }
 
     .switch input {
@@ -112,24 +103,24 @@
       right: 0;
       bottom: 0;
       background-color: #ccc;
-      transition: 0.4s;
-      border-radius: 34px;
+      transition: var(--transition);
+      border-radius: 24px;
     }
 
     .slider:before {
       position: absolute;
       content: "";
-      height: 26px;
-      width: 26px;
+      height: 18px;
+      width: 18px;
       border-radius: 50%;
-      left: 4px;
-      bottom: 4px;
+      left: 3px;
+      bottom: 3px;
       background-color: white;
-      transition: 0.4s;
+      transition: var(--transition);
     }
 
     input:checked + .slider {
-      background-color: #ca8bfe;
+      background-color: var(--accent-color);
     }
 
     input:checked + .slider:before {
@@ -138,112 +129,77 @@
   </style>
 </head>
 <body>
-  <div class="app">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="profile" title="View Profile">
-        <img src="hacker.png" alt="User Picture">
-        <h3>Do it</h3>
-        <h8>Swaraj</h8>
+  <aside class="sidebar">
+    <div class="profile">
+      <img src="hacker.png" alt="User Picture">
+      <h3>Do it</h3>
+      <p>Swaraj</p>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li class="active" title="Today's Tasks">
+          <img src="shopping-cart.png" alt="Cart"> Available Products
+        </li>
+        <li title="About Info">
+          <img src="info.png" alt="Info"> About Us
+        </li>
+        <li title="Settings">
+          <img src="settings.png" alt="Settings"> Settings
+        </li>
+      </ul>
+    </nav>
+    <img src="safestep.jpeg" alt="Safestep" class="safestep-logo">
+  </aside>
+
+  <main class="main-content">
+    <section id="about-info">
+      <h1>Contact Info</h1>
+      <p><strong>Contact Number:</strong> +918921750844</p>
+      <p><strong>Email:</strong> <a href="mailto:swarajks93@gmail.com">swarajks93@gmail.com</a></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/swaraj_r7" target="_blank">@swaraj_r7</a></p>
+    </section>
+
+    <section id="settings">
+      <h1>Settings</h1>
+      <div class="settings-category">
+        <h2><img src="profile.png" alt="Profile"> Profile</h2>
         <hr>
+        <div class="settings">
+            <span><i class="fas fa-edit"></i> Profile</span>
+          </div>
+        </div>
       </div>
 
-      <nav class="menu">
-        <ul>
-          <li class="active" data-target="today-tasks" title="Today's Tasks">
-            <img src="shopping-cart.png" alt="Cart">
-            <h7>Available Products</h7>
-          </li>
-          <li data-target="about-info" title="About Info">
-            <img src="info.png" alt="Info">
-            <h7>About Us</h7>
-          </li>
-          <li data-target="settings" title="Settings">
-            <img src="settings.png" alt="Settings">
-            <h7>Settings</h7>
-          </li>
-        </ul>
-      </nav>
+      <div class="settings-category">
+        <h2><img src="notification.png" alt="Notifications"> Notifications</h2>
+        <hr>
+        <label class="switch">
+          <input type="checkbox" id="notification-toggle">
+          <span class="slider"></span>
+        </label>
+      </div>
 
-      <!-- Safestep Image -->
-      <img src="safestep.jpeg" alt="Safestep" class="safestep">
-    </aside>
+      <div class="settings-category">
+        <h2><img src="min.png" alt="More"> More</h2>
+        <hr>
+        <label>Language: 
+          <select id="language">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+          </select>
+        </label>
+        <label>Country: 
+          <select id="country">
+            <option value="us">United States</option>
+            <option value="fr">France</option>
+            <option value="in">India</option>
+          </select>
+        </label>
+      </div>
+    </section>
+  </main>
 
-    <!-- Main Content -->
-    <main class="main-content">
-      <!-- Available Products Section -->
-      <section id="today-tasks" class="content-section active">
-        <div class="product-card" id="productList"></div>
-      </section>
-
-      <!-- About Info Section -->
-      <section id="about-info" class="content-section">
-  <h1>Contact Info</h1>
-  <div class="about-info">
-    <p><strong>Contact Number:</strong> <span id="contactNumber">+918921750844</span></p>
-    <p><strong>Email:</strong> 
-      <a href="mailto:swarajks93@gmail.com?subject=Hello&body=How%20are%20you?">
-        swarajks93@gmail.com
-      </a>
-    </p>
-    <p><strong>Instagram:</strong> 
-      <a href="https://instagram.com/swaraj_r7" target="_blank">@swaraj_r7</a>
-    </p>
-  </div>
-</section>
-
-
-      <!-- Settings Section -->
-      <section id="settings" class="content-section">
-        <h1>Settings</h1>
-        <div class="settings-category">
-          <h2><img src="profile.png" alt="Profile"> Profile</h2>
-          <hr>
-          <div class="settings">
-            <div class="button">
-                <span><img src="img2/edit.png"><h5>Profile</h5></span>
-                <span class="chevron">&gt;</span>
-            </div>
-          <!-- Add Profile Settings Content Here -->
-        </div>
-
-        <div class="settings-category">
-          <h2><img src="notification.png" alt="Notifications"> Notifications</h2>
-          <hr>
-          <div class="notification-settings">
-            <div class="notification-item">
-              <label for="notification-toggle">
-                <h5>Notifications</h5>
-              </label>
-              <label class="switch">
-                <input type="checkbox" id="notification-toggle">
-                <span class="slider"></span>
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div class="settings-category">
-          <h2><img src="min.png" alt="More"> More</h2>
-          <hr>
-          <div class="more-options">
-            <h5>Language:</h5>
-            <select id="language">
-              <option value="en">English</option>
-              <option value="fr">French</option>
-              <option value="es">Spanish</option>
-            </select>
-            <h5>Country:</h5>
-            <select id="country">
-              <option value="us">United States</option>
-              <option value="fr">France</option>
-              <option value="in">India</option>
-            </select>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
   <script src="app.js"></script>
 </body>
 </html>
