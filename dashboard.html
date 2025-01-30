@@ -161,14 +161,50 @@
 
     <section id="settings">
       <h1>Settings</h1>
+      
+
+  <main class="main-content">
+    <section id="settings">
+      <h1>Settings</h1>
       <div class="settings-category">
         <h2><img src="profile.png" alt="Profile"> Profile</h2>
         <hr>
-        <div class="settings">
-            <span><i class="fas fa-edit"></i> Profile</span>
-          </div>
+        <div class="edit-profile" onclick="openModal()">
+          <img src="edit.png"> Edit Profile
         </div>
       </div>
+    </section>
+  </main>
+
+  <div class="modal" id="profileModal">
+    <div class="modal-header">
+      <span>Edit Profile</span>
+      <span onclick="closeModal()" style="cursor: pointer;">&times;</span>
+    </div>
+    <div class="modal-content">
+      <input type="text" id="username" placeholder="Enter your name">
+      <input type="email" id="email" placeholder="Enter your email">
+    </div>
+    <div class="modal-footer">
+      <button class="close-btn" onclick="closeModal()">Cancel</button>
+      <button class="save-btn" onclick="saveProfile()">Save</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById("profileModal").classList.add("show");
+    }
+    function closeModal() {
+      document.getElementById("profileModal").classList.remove("show");
+    }
+    function saveProfile() {
+      let name = document.getElementById("username").value;
+      let email = document.getElementById("email").value;
+      alert("Profile Updated: " + name + " (" + email + ")");
+      closeModal();
+    }
+  </script>
 
       <div class="settings-category">
         <h2><img src="notification.png" alt="Notifications"> Notifications</h2>
