@@ -227,7 +227,7 @@ style.innerHTML = `
     border-radius: 8px;
     padding: 16px;
     margin: 16px;
-    background-image: url('g.jpg');
+    background-image: url('grey.jpg');
     background-size: cover; /* Ensures the image fully covers the card */
     background-position: center;
     background-repeat: no-repeat;
