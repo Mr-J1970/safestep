@@ -219,21 +219,22 @@ products.forEach((product, index) => {
 const style = document.createElement("style");
 style.innerHTML = `
     .product-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 16px;
-        margin: 16px;
-        background-image: url('g.jpg');
-         background-position: center; 
-  background-repeat: no-repeat; 
-  background-attachment: fixed; 
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    background-image: url('g.jpg');
+    background-size: cover; /* Ensures the image fully covers the card */
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
 
     .product-card:hover {
         transform: translateY(-5px);
