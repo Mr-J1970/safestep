@@ -281,23 +281,13 @@
                 <h5>Edit Profile</h5>
                 <span class="chevron">&gt;</span>
             </div>
+          
             <!-- Edit Profile Modal -->
             <div id="editProfileModal" class="modal" style="display: none;">
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Edit Profile</h2>
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" placeholder="Enter your name">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" placeholder="Enter your email">
-                    <button id="saveProfileBtn">Save</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-        <div class="settings-category">
+                          <div class="settings-category"
           <h2><img src="notification.png" alt="Notifications"> Notifications</h2>
           <hr>
           <div class="notification-settings">
@@ -331,7 +321,19 @@
             </select>
           </div>
         </div>
-      </section>
+      
+
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Enter your name">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <button id="saveProfileBtn">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
       <script>
         document.getElementById("editProfileBtn").addEventListener("click", function() {
