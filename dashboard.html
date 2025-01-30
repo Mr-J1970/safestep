@@ -191,8 +191,6 @@
     </p>
   </div>
 </section>
-
-
       <!-- Settings Section -->
       <section id="settings" class="content-section">
         <h1>Settings</h1>
@@ -200,11 +198,23 @@
           <h2><img src="profile.png" alt="Profile"> Profile</h2>
           <hr>
           <div class="settings">
-            <div class="button">
+            <div class="button" id="editProfileBtn">
                 <span><img src="edit.png"><h5>Edit Profile</h5></span>
                 <span class="chevron">&gt;</span>
             </div>
-          <!-- Add Profile Settings Content Here -->
+            <!-- Edit Profile Modal -->
+            <div id="editProfileModal" class="modal" style="display: none;">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Edit Profile</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter your name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <button id="saveProfileBtn">Save</button>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="settings-category">
@@ -242,8 +252,24 @@
           </div>
         </div>
       </section>
-    </main>
-  </div>
+
+      <script>
+        document.getElementById("editProfileBtn").addEventListener("click", function() {
+            document.getElementById("editProfileModal").style.display = "block";
+        });
+
+        document.querySelector(".close").addEventListener("click", function() {
+            document.getElementById("editProfileModal").style.display = "none";
+        });
+
+        document.getElementById("saveProfileBtn").addEventListener("click", function() {
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+            alert("Profile Updated: " + username + ", " + email);
+            document.getElementById("editProfileModal").style.display = "none";
+        });
+      </script>
+
   <script src="app.js"></script>
 </body>
 </html>
