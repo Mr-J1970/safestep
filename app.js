@@ -123,71 +123,71 @@ const loadProducts = () => {
         name: "Stretcher", 
         image: "s.jpg", 
         description: "Heavy Duty Stretcher for Patient Transport, Foldable & Portable, Adjustable Height for Easy Movement, Medical Rescue Equipment.", 
-        price: 199, 
-        buyNowPrice: 220 
+        price: 1999, 
+        buyNowPrice: 2200 
     },
     { 
         name: "Wheelchair", 
         image: "w.jpg", 
         description: "Foldable Wheelchair for Easy Mobility, Lightweight Aluminum Frame, Adjustable Footrests, Comfortable Padded Seat, Ideal for Travel and Home Use.", 
-        price: 299, 
-        buyNowPrice: 330 
+        price: 2999, 
+        buyNowPrice: 3300
     },
     { 
         name: "Prosthetic limbs", 
         image: "l.jpg", 
         description: "Prosthetic Arm for Upper Limb Amputees, Flexible Design, High-Performance Grip, Adjustable Socket for Optimal Fit, Comfortable and Functional.", 
-        price: 1500, 
-        buyNowPrice: 1650 
+        price: 15000, 
+        buyNowPrice: 16500 
     },
     { 
         name: "Hearing aids", 
         image: "h.jpg", 
         description: "Rechargeable Hearing Aids for Seniors, Behind-the-Ear Style, Clear Sound Quality, Long Battery Life, Comfortable Fit.", 
-        price: 499, 
-        buyNowPrice: 549 
+        price: 1400, 
+        buyNowPrice: 1500
     },
     { 
         name: "Lifting chair", 
         image: "lift.jpg", 
         description: "Power Lift Recliner Chair for Elderly, Remote-Controlled, Comfortable Plush Upholstery, Smooth Lifting Mechanism, Ideal for Seniors with Mobility Issues.", 
-        price: 799, 
-        buyNowPrice: 879 
+        price: 10799, 
+        buyNowPrice: 12879 
     },
     { 
         name: "Cane", 
         image: "cane.jpg", 
         description: "Adjustable Walking Cane for Seniors, Lightweight Aluminum Frame, Ergonomic Handle for Comfort, Non-Slip Tip for Stability, Ideal for Everyday Use.", 
-        price: 45, 
-        buyNowPrice: 50 
+        price: 450, 
+        buyNowPrice: 500 
     },
     { 
         name: "Power scooters", 
         image: "pw.jpg", 
         description: "Heavy-Duty Power Scooter for Adults, High Weight Capacity, Adjustable Speed Settings, Padded Seat and Backrest, Perfect for Long.", 
-        price: 1200, 
-        buyNowPrice: 1300 
+        price: 12000, 
+        buyNowPrice: 13000 
     },
     { 
         name: "Hospital bed", 
         image: "bed.jpg", 
         description: "Manual Hospital Bed for Seniors, Adjustable Head and Foot Sections, Easy-to-Operate Crank Mechanism, Durable Construction for Home or Medical Use.", 
-        price: 650, 
-        buyNowPrice: 700 
+        price: 1650, 
+        buyNowPrice: 2000 
     },
     { 
         name: "Prosthetic Arm", 
         image: "arm.jpg", 
         description: "Custom Prosthetic Arm for Upper Limb Amputees, Lightweight and Durable, Adjustable Fit for Comfort, Advanced Grip Technology for Enhanced Functionality.", 
-        price: 1800, 
-        buyNowPrice: 2000 
+        price: 18000, 
+        buyNowPrice: 20000 
     },
     { 
         name: "Ultrasonic sensor", 
         image: "u.jpeg", 
         description: "Ultrasonic Obstacle Detection Sensor for Visually Impaired, Compact and Lightweight, Real-Time Vibration and Audio Alerts, High-Precision Detection for Enhanced Mobility.", 
-        price: 100, 
-        buyNowPrice: 120 
+        price: 1500, 
+        buyNowPrice: 1550 
     }
 ];
 
@@ -227,7 +227,7 @@ style.innerHTML = `
         border-radius: 8px;
         padding: 16px;
         margin: 16px;
-        background-color: black;
+        background-image: url('grey.jpg');
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s, box-shadow 0.3s;
     }
