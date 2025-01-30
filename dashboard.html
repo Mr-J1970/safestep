@@ -143,8 +143,8 @@
     <aside class="sidebar">
       <div class="profile" title="View Profile">
         <img src="hacker.png" alt="User Picture">
-        <h3>Do it</h3>
-        <h8>Swaraj</h8>
+        <h3 id="displayedName">Do it</h3>
+        <h8 id="displayedEmail">Swaraj</h8>
         <hr>
       </div>
 
@@ -194,15 +194,7 @@
 
 
       <!-- Settings Section -->
-      <section id="settings" class="content-section">
-      <h1>Settings</h1>
-      <div class="settings-category">
-        <h2><img src="profile.png" alt="Profile"> Profile</h2>
-        <hr>
-        <div class="edit-profile" onclick="openModal()">
-          <img src="edit.png"> Edit Profile
-        </div>
-      </div>
+      
 
       <div class="modal" id="profileModal">
         <div class="modal-header">
@@ -225,7 +217,7 @@
           <hr>
           <div class="settings">
             <div class="button">
-                <span><img src="img2/edit.png"><h5>Profile</h5></span>
+                <span><img src="edit.png"><h5>Edit Profile</h5></span>
                 <span class="chevron">&gt;</span>
             </div>
           <!-- Add Profile Settings Content Here -->
@@ -278,12 +270,20 @@
     function saveProfile() {
       let name = document.getElementById("username").value;
       let email = document.getElementById("email").value;
-      alert("Profile Updated: " + name + " (" + email + ")");
+      
+      if (name.trim() !== "" && email.trim() !== "") {
+        document.getElementById("displayedName").textContent = name;
+        document.getElementById("displayedEmail").textContent = email;
+      }
+
       closeModal();
     }
   </script>
   <script src="app.js"></script>
 </body>
 </html>
+
+ 
+
 
  
