@@ -227,7 +227,7 @@ style.innerHTML = `
         border-radius: 8px;
         padding: 16px;
         margin: 16px;
-        background-image: url('grey.jpg');
+        background-image: url('g.jpg');
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s, box-shadow 0.3s;
     }
