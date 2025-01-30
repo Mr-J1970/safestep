@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const createAccountForm = document.getElementById("createAccountForm");
     const createAccountLink = document.getElementById("createAccountLink");
 
-    // Function to save user data to localStorage
+    
     const saveAccount = (username, email, password) => {
         localStorage.setItem("userAccount", JSON.stringify({ username, email, password }));
     };
