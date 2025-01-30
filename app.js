@@ -183,9 +183,9 @@ const loadProducts = () => {
         buyNowPrice: 2000 
     },
     { 
-        name: "Product 10", 
-        image: "https://via.placeholder.com/150x100?text=Product+10", 
-        description: "A reliable product trusted by professionals.", 
+        name: "Ultrasonic sensor", 
+        image: "u.jpeg", 
+        description: "Ultrasonic Obstacle Detection Sensor for Visually Impaired, Compact and Lightweight, Real-Time Vibration and Audio Alerts, High-Precision Detection for Enhanced Mobility.", 
         price: 100, 
         buyNowPrice: 120 
     }
