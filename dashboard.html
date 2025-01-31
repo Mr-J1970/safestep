@@ -142,7 +142,9 @@
     }
 
     .settings-category {
-      margin-top: 20px;
+      font-family: Arial, sans-serif;
+                max-width: 1400px; 
+                margin: 20px auto;
     }
 
     .settings-category h2 img {
@@ -212,12 +214,7 @@
       vertical-align: middle;
       margin-right: 10px;
     }
-      .settings {
-                font-family: Arial, sans-serif;
-                max-width: 1400px; 
-                margin: 20px auto; 
-            }
-            .settings .button {
+            .settings-category .button {
                 display: flex; 
                 justify-content: space-between; 
                 align-items: center; 
@@ -230,13 +227,13 @@
                 background-color: #f9f9f9; 
                 transition: background-color 0.3s; /
             }
-            .settings .button .chevron {
+            .settings-category .button .chevron {
                 font-size: 18px; 
                 color: #555; 
             }
     
           
-            .settings .button:hover {
+            .settings-category .button:hover {
                 background-color: #fafafa; 
 
     
@@ -297,7 +294,7 @@
   </div>
 </section>
           <!-- Settings Section -->
-      <div class="settings">
+      <div class="settings-category">
             <div class="button">
                 <span><img src="img2/edit.png"><h5>Profile</h5></span>
                 <span class="chevron">&gt;</span>
@@ -310,10 +307,6 @@
                 <span><image src="img2/key.png"><h5>Change Password</h5></span>
                 <span class="chevron">&gt;</span>
             </div>
-          </div>
-            
-
-<div class="settings-category">
     <h2><img src="notification.png" alt="Notifications"> Notifications</h2>
     <hr>
     <div class="notification-settings">
@@ -326,7 +319,7 @@
                 <span class="slider"></span>
             </label>
         </div>
-<div class="settings-category">
+      </div>
     <h2><img src="min.png" alt="More"> More</h2>
     <hr>
     <div class="more-options">
@@ -344,8 +337,6 @@
         </select>
     </div>
 </div>
-    </main>
-      <?div>
           
             <!-- Edit Profile Modal -->
             <div id="editProfileModal" class="modal" style="display: none;">
