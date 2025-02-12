@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const savedUser = localStorage.getItem("loggedInUser");
 
         if (savedUser) {
-            const usernameElement = document.querySelector(".profile h6"); // Use a valid HTML element
+            const usernameElement = document.querySelector(".profile h8"); // Use a valid HTML element
 
             if (usernameElement) {
                 usernameElement.textContent = savedUser;
