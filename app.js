@@ -76,17 +76,24 @@ if (createAccountForm) {
             redirectToPage("s.html");
         });
     }
-
-    // Update dashboard username if on dashboard.html
+document.addEventListener("DOMContentLoaded", function () {
     if (window.location.pathname.includes("dashboard.html")) {
         const savedUser = localStorage.getItem("loggedInUser");
+
         if (savedUser) {
-            const usernameElement = document.querySelector(".profile h8");
+            const usernameElement = document.querySelector(".profile h6"); // Use a valid HTML element
+
             if (usernameElement) {
                 usernameElement.textContent = savedUser;
+            } else {
+                console.error("Username element not found!");
             }
+        } else {
+            console.error("No loggedInUser found in localStorage!");
         }
     }
+});
+
 
     const menuItems = document.querySelectorAll(".menu ul li");
     const sections = document.querySelectorAll(".content-section");
