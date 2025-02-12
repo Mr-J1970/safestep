@@ -72,7 +72,6 @@
       padding: 20px;
       overflow-y: auto;
     }
-
     .settings-category {
       margin-top: 20px;
     }
@@ -81,6 +80,7 @@
       vertical-align: middle;
       margin-right: 10px;
     }
+
 
     .notification-settings,
     .more-options {
@@ -135,25 +135,6 @@
     input:checked + .slider:before {
       transform: translateX(26px);
     }
-    
-            .settings.button {
-                display: flex; 
-                justify-content: space-between; 
-                align-items: center; 
-                padding: 10px 15px; 
-                font-size: 18px; 
-                border: 1px solid #ddd; 
-                border-radius: 5px; 
-                             margin-bottom: 10px; 
-                cursor: pointer; 
-                background-color: #f9f9f9; 
-                transition: background-color 0.3s; /
-            }
-            .settings.button .chevron {
-                font-size: 18px; 
-                color: #555; 
-            }
-    
           
             .settings .button:hover {
                 background-color: #fafafa; 
@@ -214,42 +195,39 @@
     </p>
   </div>
 </section>
-
-
-      <!-- Settings Section -->
-      <section id="settings" class="content-section">
-    <h1>Settings</h1>
-
-    <div class="settings-category">
-        <h2><img src="profile.png" alt="Profile"> Profile</h2>
-        <hr>
-        <div class="settings">
-            <div class="button">
-                <span>
-                    <img src="edit.png" alt="Edit">
-                    <h5>Edit Profile</h5>
-                </span>
-                <span class="chevron">&gt;</span>
-            </div>
-            <!-- Add Profile Settings Content Here -->
+  <section id="settings" class="content-section">
+        <h1>Settings</h1>
+        <div class="settings-category">
+          <h2><img src="profile.png" alt="Profile"> Profile</h2>
+          <hr>
+          <!-- Add Profile Settings Content Here -->
         </div>
-    </div>
 
-    <div class="settings-category">
-        <h2><img src="notification.png" alt="Notifications"> Notifications</h2>
-        <hr>
-        <div class="notification-settings">
+        <div class="settings-category">
+          <h2><img src="notification.png" alt="Notifications"> Notifications</h2>
+          <hr>
+          <div class="notification-settings">
             <div class="notification-item">
-                <label for="notification-toggle">
-                    <h5>Notifications</h5>
-                </label>
-                <label class="switch">
-                    <input type="checkbox" id="notification-toggle">
-                    <span class="slider"></span>
-                </label>
+              <label for="notification-toggle">
+                <h5>Notifications</h5>
+              </label>
+              <label class="switch">
+                <input type="checkbox" id="notification-toggle">
+                <span class="slider"></span>
+              </label>
             </div>
+            <div class="notification-item">
+              <label for="task-notification-toggle">
+                <h5>Task Notifications</h5>
+              </label>
+              <label class="switch">
+                <input type="checkbox" id="task-notification-toggle">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
         </div>
-    </div>
+
         <div class="settings-category">
           <h2><img src="min.png" alt="More"> More</h2>
           <hr>
@@ -271,7 +249,7 @@
       </section>
     </main>
   </div>
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
 
