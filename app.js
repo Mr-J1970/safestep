@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const savedUser = localStorage.getItem("loggedInUser");
 
         if (savedUser) {
-            const usernameElement = document.querySelector(".profile h8"); // Use a valid HTML element
+            const usernameElement = document.querySelector(".profile h3"); // Fixed selector
 
             if (usernameElement) {
                 usernameElement.textContent = savedUser;
@@ -93,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
 
 
     const menuItems = document.querySelectorAll(".menu ul li");
