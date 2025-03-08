@@ -225,7 +225,7 @@ products.forEach((product, index) => {
 // Add CSS styles to enhance the layout
 const style = document.createElement("style");
 style.innerHTML = `
-    .product-card {
+     .product-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -243,10 +243,31 @@ style.innerHTML = `
 }
 
 
-    .product-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    }
+.product-card:hover {
+    transform: scale(1.6);
+    z-index: 1;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-up,
+.arrow-down {
+    font-size: 24px;
+    color: #555;
+    position: absolute;
+    cursor: pointer;
+}
+
+.arrow-up {
+    top: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow-down {
+    bottom: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 .product-image-wrapper {
     width: 150px; /* Set a fixed width */
@@ -372,47 +393,3 @@ function buyNow(index) {
     const whatsappURL = `https://wa.me/918921750844?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");
 }
-
-/*.product-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 16px;
-    background-image: url('grey.jpg');
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-
-.product-image-wrapper:hover {
-    transform: scale(1.6);
-    z-index: 1;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.arrow-up,
-.arrow-down {
-    font-size: 24px;
-    color: #555;
-    position: absolute;
-    cursor: pointer;
-}
-
-.arrow-up {
-    top: -32px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.arrow-down {
-    bottom: -32px;
-    left: 50%;
-    transform: translateX(-50%);
-}/*
