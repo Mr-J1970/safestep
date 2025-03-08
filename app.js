@@ -365,13 +365,4 @@ function buyNow(index) {
     const whatsappURL = `https://wa.me/918921750844?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");
 }
-    document.addEventListener("DOMContentLoaded", () => {
-    const createAccountLink = document.getElementById("createAccountLink");
-
-    // Redirect to account creation page
-    if (createAccountLink) {
-        createAccountLink.addEventListener("click", () => {
-            window.location.href = "s.html";
-        });
-    }
-});
+  
