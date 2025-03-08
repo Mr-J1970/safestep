@@ -1,9 +1,21 @@
-// app.js
 
 document.addEventListener("DOMContentLoaded", () => {
     const signInForm = document.getElementById("signInForm");
     const createAccountForm = document.getElementById("createAccountForm");
-    const createAccountLink = document.getElementById("createAccountLink");
+  const createAccountLink = document.getElementById("createAccountLink");
+    
+    // Function to redirect to a given page
+    const redirectToPage = (url) => {
+        window.location.href = url;
+    };
+
+    // Redirect to account creation page
+    if (createAccountLink) {
+        createAccountLink.addEventListener("click", () => {
+            redirectToPage("s.html");
+        });
+    }
+});
   
     // Function to save user data to localStorage
     const saveAccount = (username, email, password) => {
