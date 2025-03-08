@@ -243,10 +243,12 @@ style.innerHTML = `
 }
 
 
-    .product-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    }
+.product-card:hover {
+    transform: scale(2);
+    z-index: 1;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    height: 50%;
+}
 
 .product-image-wrapper {
     width: 150px; /* Set a fixed width */
