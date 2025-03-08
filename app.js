@@ -1,4 +1,4 @@
- document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const signInForm = document.getElementById("signInForm");
     const createAccountForm = document.getElementById("createAccountForm");
     const createAccountLink = document.getElementById("createAccountLink");
@@ -243,12 +243,10 @@ style.innerHTML = `
 }
 
 
-.product-image-wrapper:hover {
-    transform: scale(2);
-    z-index: 1;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    height: 50%;
-}
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
 
 .product-image-wrapper {
     width: 150px; /* Set a fixed width */
@@ -374,6 +372,7 @@ function buyNow(index) {
     const whatsappURL = `https://wa.me/918921750844?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");
 }
+
 /*.product-card {
     display: flex;
     flex-direction: column;
