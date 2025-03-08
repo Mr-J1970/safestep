@@ -1,9 +1,8 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     const signInForm = document.getElementById("signInForm");
     const createAccountForm = document.getElementById("createAccountForm");
-  const createAccountLink = document.getElementById("createAccountLink");
-    
+    const createAccountLink = document.getElementById("createAccountLink");
+
     // Function to redirect to a given page
     const redirectToPage = (url) => {
         window.location.href = url;
@@ -11,7 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Redirect to account creation page
     if (createAccountLink) {
-        createAccountLink.addEventListener("click", () => {
+        createAccountLink.addEventListener("click", (event) => {
+            event.preventDefault(); // Prevent default link behavior
             redirectToPage("s.html");
         });
     }
