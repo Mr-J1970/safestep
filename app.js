@@ -243,7 +243,7 @@ style.innerHTML = `
 }
 
 
-.product-description:hover {
+.product-image-wrapper:hover {
     transform: scale(1.6);
     z-index: 1;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
