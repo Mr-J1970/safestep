@@ -366,13 +366,4 @@ function buyNow(index) {
     window.open(whatsappURL, "_blank");
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const savedUser = localStorage.getItem("loggedInUser");
-    if (savedUser) {
-        const usernameElement = document.querySelector("h8");
-        if (usernameElement) {
-            usernameElement.textContent = savedUser;
-        }
-    }
-});
 
