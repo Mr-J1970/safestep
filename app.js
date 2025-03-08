@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const savedUser = localStorage.getItem("loggedInUser");
 
         if (savedUser) {
-            const usernameElement = document.querySelector(".profile h3"); // Fixed selector
+            const usernameElement = document.querySelector(".profile h8"); // Use a valid HTML element
 
             if (usernameElement) {
                 usernameElement.textContent = savedUser;
@@ -93,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
-
 
 
     const menuItems = document.querySelectorAll(".menu ul li");
@@ -373,5 +372,3 @@ function buyNow(index) {
     const whatsappURL = `https://wa.me/918921750844?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");
 }
-    
-  
