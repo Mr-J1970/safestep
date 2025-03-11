@@ -71,18 +71,34 @@ if (createAccountForm) {
 
 
     // Redirect to account creation page
-    if (createAccountLink) {
-        createAccountLink.addEventListener("click", () => {
-            redirectToPage("s.html");
-        });
-    }
-document.addEventListener("DOMContentLoaded", function () {
-    if (window.location.pathname.includes("dashboard.html")) {
+    document.addEventListener("DOMContentLoaded", function () {
+        // Handle "Create Account" link redirection
+        const createAccountLink = document.getElementById("createAccountLink");
+        if (createAccountLink) {
+            createAccountLink.addEventListener("click", () => {
+                redirectToPage("s.html");
+            });
+        }
+    
+        // Function to handle page redirection
+        function redirectToPage(url) {
+            window.location.href = url;
+        }
+    
+        // Extract username from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get("username");
+    
+        // Check if a username exists in the URL (i.e., user just logged in)
+        if (username) {
+            localStorage.setItem("loggedInUser", username); // Save to localStorage
+        }
+    
+        // Load the username from localStorage if available
         const savedUser = localStorage.getItem("loggedInUser");
-
+    
         if (savedUser) {
-            const usernameElement = document.querySelector(".profile h8"); // Use a valid HTML element
-
+            const usernameElement = document.querySelector(".profile h2"); // Ensure h2 exists in HTML
             if (usernameElement) {
                 usernameElement.textContent = savedUser;
             } else {
@@ -91,8 +107,8 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             console.error("No loggedInUser found in localStorage!");
         }
-    }
-});
+    });
+    
 
 
     const menuItems = document.querySelectorAll(".menu ul li");
@@ -225,85 +241,72 @@ products.forEach((product, index) => {
 // Add CSS styles to enhance the layout
 const style = document.createElement("style");
 style.innerHTML = `
-     .product-card {
+.product-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
     margin: 16px;
-    background-image: url('grey.jpg');
-    background-size: cover; /* Ensures the image fully covers the card */
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    background: url('grey.jpg') center/cover no-repeat;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
-
 
 .product-card:hover {
-    transform: scale(1.6);
-    z-index: 1;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.arrow-up,
-.arrow-down {
-    font-size: 24px;
-    color: #555;
-    position: absolute;
-    cursor: pointer;
-}
-
-.arrow-up {
-    top: -32px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.arrow-down {
-    bottom: -32px;
-    left: 50%;
-    transform: translateX(-50%);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 .product-image-wrapper {
-    width: 150px; /* Set a fixed width */
-    height: 100px; /* Set a fixed height */
-    overflow: hidden; /* Hide parts of the image that go outside this area */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    margin-bottom: 10px; /* Add spacing below the image */
+    width: 160px;
+    height: 110px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease-in-out;
 }
 
-    .product-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .product-details {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product-name {
-        font-size: 18px;
-        font-weight: bold;
-        margin: 10px 0;
-    }
-
-    .product-description {
-    font-size: 14px; /* Uniform font size for all descriptions */
-    line-height: 1.5; /* Consistent spacing between lines */
-    color: white; /* Standardized color for readability */
-    text-align: left; /* Align text to the left */
-    margin-top: 10px; /* Space above the description for separation */
-    max-width: 300px; /* Optional: Limit the width for better alignment */
-    overflow-wrap: break-word; /* Handle long words gracefully */
+.product-image-wrapper:hover {
+    transform: scale(1.1);
+    width: 100%;
 }
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 280px;
+}
+
+.product-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: white;
+}
+
+.product-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 10px;
+    text-align: center;
+    word-wrap: break-word;
+    max-width: 90%;
+}
+
 
 
     .product-buttons {
@@ -393,3 +396,4 @@ function buyNow(index) {
     const whatsappURL = `https://wa.me/918921750844?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");
 }
+
