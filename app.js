@@ -107,16 +107,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const products = [
-        { name: "Stretcher", image: "s.jpg", description: "Heavy Duty Stretcher for Patient Transport...", price: 2200, buyNowPrice: 1999 },
-        { name: "Wheelchair", image: "w.jpg", description: "Foldable Wheelchair for Easy Mobility...", price: 3300, buyNowPrice: 2999 },
-        { name: "Prosthetic limbs", image: "l.jpg", description: "Prosthetic Arm for Upper Limb Amputees...", price: 16500, buyNowPrice: 15000 },
-        { name: "Hearing aids", image: "h.jpg", description: "Rechargeable Hearing Aids for Seniors...", price: 1500, buyNowPrice: 1400 },
-        { name: "Lifting chair", image: "lift.jpg", description: "Power Lift Recliner Chair for Elderly...", price: 12879, buyNowPrice: 10779 },
-        { name: "Cane", image: "cane.jpg", description: "Adjustable Walking Cane for Seniors...", price: 500, buyNowPrice: 450 },
-        { name: "Power scooters", image: "pw.jpg", description: "Heavy-Duty Power Scooter for Adults...", price: 13000, buyNowPrice: 12000 },
+        { name: "Stretcher", image: "s.jpg", description: "Heavy Duty Stretcher for Patient Transport...", price: 8821, buyNowPrice: 8000 },
+        { name: "Wheelchair", image: "w.jpg", description: "Foldable Wheelchair for Easy Mobility...", price: 13293, buyNowPrice: 12999 },
+        { name: "Prosthetic limbs", image: "l.jpg", description: "Prosthetic Arm for Upper Limb Amputees...", price: 17500, buyNowPrice: 17000 },
+        { name: "Hearing aids", image: "h.jpg", description: "Rechargeable Hearing Aids for Seniors...", price: 15000, buyNowPrice: 14820 },
+        { name: "Lifting chair", image: "lift.jpg", description: "Power Lift Recliner Chair for Elderly...", price: 82879, buyNowPrice: 80779 },
+        { name: "Cane", image: "cane.jpg", description: "Adjustable Walking Cane for Seniors...", price: 1500, buyNowPrice: 1450 },
+        { name: "Power scooters", image: "pw.jpg", description: "Heavy-Duty Power Scooter for Adults...", price: 130000, buyNowPrice: 120000 },
         { name: "Hospital bed", image: "bed.jpg", description: "Manual Hospital Bed for Seniors...", price: 2000, buyNowPrice: 1650 },
-        { name: "Prosthetic Arm", image: "arm.jpg", description: "Custom Prosthetic Arm for Upper Limb Amputees...", price: 20000, buyNowPrice: 18000 },
-        { name: "Ultrasonic sensor", image: "u.jpeg", description: "Ultrasonic Obstacle Detection Sensor...", price: 1550, buyNowPrice: 1500 }
+        { name: "Prosthetic Arm", image: "arm.jpg", description: "Custom Prosthetic Arm for Upper Limb Amputees...", price: 200000, buyNowPrice: 180000 },
+        { name: "Ultrasonic sensor", image: "u.jpeg", description: "Ultrasonic Obstacle Detection Sensor...", price: 550, buyNowPrice: 500 }
     ];
 
     const loadProducts = () => {
